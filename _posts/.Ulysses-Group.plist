@@ -290,6 +290,16 @@
 					<integer>71</integer>
 				</dict>
 			</dict>
+			<key>2016-12-16-toolList.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>509203800.31790501</real>
+				<key>version</key>
+				<dict>
+					<key>9cfad7b81ef5c07f55e18034c15e207df697cb49a72011bfd892f726eb729bb2</key>
+					<integer>73</integer>
+				</dict>
+			</dict>
 			<key>2017-02-16-Django.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -298,6 +308,16 @@
 				<dict>
 					<key>9cfad7b81ef5c07f55e18034c15e207df697cb49a72011bfd892f726eb729bb2</key>
 					<integer>69</integer>
+				</dict>
+			</dict>
+			<key>2017-02-19.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>509203812.797113</real>
+				<key>version</key>
+				<dict>
+					<key>9cfad7b81ef5c07f55e18034c15e207df697cb49a72011bfd892f726eb729bb2</key>
+					<integer>74</integer>
 				</dict>
 			</dict>
 		</dict>
@@ -312,6 +332,9 @@
 		</array>
 		<array>
 			<string>2017-02-16-Django.md</string>
+		</array>
+		<array>
+			<string>2017-02-19.md</string>
 		</array>
 		<array>
 			<string>2016-04-22-dhamma.md</string>
@@ -391,6 +414,9 @@
 		<array>
 			<string>2016-11-24-ZSH.md</string>
 		</array>
+		<array>
+			<string>2016-12-16-toolList.md</string>
+		</array>
 	</array>
 	<key>storeFormatVersion</key>
 	<integer>1</integer>
@@ -399,7 +425,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>9cfad7b81ef5c07f55e18034c15e207df697cb49a72011bfd892f726eb729bb2</key>
-			<integer>71</integer>
+			<integer>75</integer>
 		</dict>
 	</dict>
 </dict>
