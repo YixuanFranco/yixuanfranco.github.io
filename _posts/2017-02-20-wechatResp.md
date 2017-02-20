@@ -55,23 +55,13 @@ categories:
 	                       content_type = 'application/xml'
 	        )
  
+然后我就尝试着…把 view.py 的 GET 部分写了. 然后我又....在 [reply_text.xml][1] 里把模板按照官方文档填写好了. 
 
-然后我就尝试着…把 view.py 的 GET 部分写了. 然后我又....在 reply\_text.xml 里把模板按照官方文档填写好了. 
-
-	<xml>
-	<ToUserName><![CDATA[{{toUserName}}]]></ToUserName>
-	<FromUserName><![CDATA[{{fromUserName}}]]></FromUserName>
-	<CreateTime>{{createTime}}</CreateTime>
-	<MsgType><![CDATA[{{msgType}}]]></MsgType>
-	<Content><![CDATA[{{content}}]]></Content>
-	</xml>
  
-
 可是...为什么为什么为什么就是不行啊....传说中可能遇到的坑:
 1. 我绝对已经去掉传说中的 csrf 了. 所以这个问题不是...
 2. 该引用的我都引用了. 
-
-## 迷思…
+#### 迷思…
 
 打开服务器…用我的个人号往微信公众号发信息...服务器显示, 扔出了 POST + 一串充满 什么 timestamp, appip 的 URL.
 
@@ -79,3 +69,5 @@ categories:
 
 	-------- 懵逼的分割线 --------
 	Time: Feb 20, 22:58 此时懵逼中
+
+[1]:	https://github.com/YixuanFranco/wx/blob/master/mysite/wechat/templates/reply_text.xml

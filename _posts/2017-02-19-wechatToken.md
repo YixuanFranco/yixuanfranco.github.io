@@ -20,20 +20,20 @@ categories:
 
 上面就是开发思路了, 我们可以按照思路先写一个半伪代码:
 
-	
+ 
 	def wechat(request): #拿到微信发给咱们的请求
 	    if request.method == "GET":   # 如果是 GET 请求就继续
-		    # 1. 然后在这个部分里, 
-		    # 我们要拿到微信 GET 发给我们的一些参数, 
-		    # 官文里写了, 微信发给我们的 GET 里有:
-		    # signature, timestamp, nonce, echostr
+	        # 1. 然后在这个部分里, 
+	        # 我们要拿到微信 GET 发给我们的一些参数, 
+	        # 官文里写了, 微信发给我们的 GET 里有:
+	        # signature, timestamp, nonce, echostr
 	
 	             # 2. 然后我们按照上面的加密流程依次
-		     # 排序: 把 token, timestamp 和 nonce 进行 字典排序
+	         # 排序: 把 token, timestamp 和 nonce 进行 字典排序
 	              #  拼成字符串然后加密字符串
 	
-		    #3. 看看加密字符串和之前拿到的 signature 一不一样, 
-		    # 如果一样就原样返回 echostr 参数内容
+	        #3. 看看加密字符串和之前拿到的 signature 一不一样, 
+	        # 如果一样就原样返回 echostr 参数内容
 
 嗯哼…大体思路就是这样的, 把它写成可用的代码就行了. 打开你 Django 项目中的 view…
 
@@ -52,7 +52,7 @@ categories:
 	        timestamp = request.GET.get("timestamp", None)
 	        nonce = request.GET.get("nonce", None)
 	        echostr = request.GET.get("echostr", None)
-		token = wechat_token 
+	    token = wechat_token 
 	        range_dict = [token, timestamp, nonce] # 做成一个字典
 	        range_dict.sort()  # 把字典排序
 	        range_str = "%s%s%s" % tuple(range_dict)  # 转换成元祖
@@ -66,7 +66,7 @@ categories:
  以防你是小白…我的说点儿 Django 里的常识. 我们前一篇提到了, 假设你的服务器 外网 IP 是  http://123. 12. 123. 12, 要打开你的 Django 应用, 可以去 http://123. 12. 123. 12/wechat. 
 
 Django 整个项目文件里, 有两个 urls.py, 一个在项目底下, 一个在 APP 底下. 拿我们举的例子来说:  
-* 我们的项目名叫 mysite, 有个 mysite/mysite/urls.py
+\* 我们的项目名叫 mysite, 有个 mysite/mysite/urls.py
 * 我们的 App 名叫 wechat, 有个 mysite/wechat/urls.py
 
 因为一个项目里面可以有多个 APP, 所以, 我们可以在 mysite/mysite/urls.py 里设置:
