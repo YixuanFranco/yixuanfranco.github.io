@@ -68,6 +68,27 @@ categories:
  WTH, 这就奇怪了…这证明俺的服务器和微信的服务器其实是通的了. 可是为啥 Django 就不干活呢? 到底是哪里哪里哪里哪里出了问题呢? 俺不知道. 俺去看会动画片压压惊....   
 
 	-------- 懵逼的分割线 --------
-	Time: Feb 20, 22:58 此时懵逼中
+	Time: Feb. 20, 22:58 此时懵逼中
+
+### 解决了!
+
+所以我到底错在哪儿了, 在 Mr.佟的指导下…
+
+我发现我简直是智障呐!!! 上面的 view.py  的第二段代码…我竟然写成了:
+
+	'' elif request.method == "GET":
+	''         # do something about POST here
+	''         str_xml = request.body.decode('utf-8')    #use body to get raw data
+
+我靠…没有想到在这里翻了沟而且一直没发现. 我靠靠靠靠靠…改成:
+	'' elif request.method == "POST":
+	''         # do something about POST here
+	''         str_xml = request.body.decode('utf-8')    #use body to get raw data
+
+按照上面说的逻辑改成 POST 就行了…果然代码还要别人 review 才知道自己自己脑袋哪根筋出了问题. 
+
+	-----睡觉的分割线-----
+	Time: Feb. 20 23:22 
+	一下午的懵逼 VS. 解决只距离不到 30mins
 
 [1]:	https://github.com/YixuanFranco/wx/blob/master/mysite/wechat/templates/reply_text.xml
