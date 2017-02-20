@@ -76,14 +76,15 @@ categories:
 
 我发现我简直是智障呐!!! 上面的 view.py  的第二段代码…我竟然写成了:
 
-	'' elif request.method == "GET":
-	''         # do something about POST here
-	''         str_xml = request.body.decode('utf-8')    #use body to get raw data
+	elif request.method == "GET":
+	        # do something about POST here
+	        str_xml = request.body.decode('utf-8')    #use body to get raw data
 
 我靠…没有想到在这里翻了沟而且一直没发现. 我靠靠靠靠靠…改成:
-	'' elif request.method == "POST":
-	''         # do something about POST here
-	''         str_xml = request.body.decode('utf-8')    #use body to get raw data
+
+	elif request.method == "POST":
+	        # do something about POST here
+	        str_xml = request.body.decode('utf-8')    #use body to get raw data
 
 按照上面说的逻辑改成 POST 就行了…果然代码还要别人 review 才知道自己自己脑袋哪根筋出了问题. 
 
