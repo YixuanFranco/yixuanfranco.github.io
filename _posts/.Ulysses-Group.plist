@@ -310,6 +310,16 @@
 					<integer>69</integer>
 				</dict>
 			</dict>
+			<key>2017-02-19-wechatResp.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>509263048.24581498</real>
+				<key>version</key>
+				<dict>
+					<key>9cfad7b81ef5c07f55e18034c15e207df697cb49a72011bfd892f726eb729bb2</key>
+					<integer>80</integer>
+				</dict>
+			</dict>
 			<key>2017-02-19-wechatToken.md</key>
 			<dict>
 				<key>lastModification</key>
@@ -335,6 +345,9 @@
 		</array>
 		<array>
 			<string>2017-02-19-wechatToken.md</string>
+		</array>
+		<array>
+			<string>2017-02-19-wechatResp.md</string>
 		</array>
 		<array>
 			<string>2016-04-22-dhamma.md</string>
@@ -425,7 +438,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>9cfad7b81ef5c07f55e18034c15e207df697cb49a72011bfd892f726eb729bb2</key>
-			<integer>77</integer>
+			<integer>81</integer>
 		</dict>
 	</dict>
 </dict>
