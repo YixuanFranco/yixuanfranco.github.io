@@ -55,7 +55,7 @@ categories:
 	                       content_type = 'application/xml'
 	        )
  
-然后我就尝试着…把 view.py 的 GET 部分写了. 然后我又....在 [reply_text.xml][1] 里把模板按照官方文档填写好了. 
+然后我就尝试着…把 view.py 的 POST 部分写了. 然后我又....在 [reply_text.xml][1] 里把模板按照官方文档填写好了. 
 
  
 可是...为什么为什么为什么就是不行啊....传说中可能遇到的坑:
