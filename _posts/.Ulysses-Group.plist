@@ -330,6 +330,16 @@
 					<integer>82</integer>
 				</dict>
 			</dict>
+			<key>2017-02-21-4forClass.md</key>
+			<dict>
+				<key>lastModification</key>
+				<real>509347757.93652397</real>
+				<key>version</key>
+				<dict>
+					<key>9cfad7b81ef5c07f55e18034c15e207df697cb49a72011bfd892f726eb729bb2</key>
+					<integer>86</integer>
+				</dict>
+			</dict>
 		</dict>
 	</dict>
 	<key>sheetClusters</key>
@@ -348,6 +358,9 @@
 		</array>
 		<array>
 			<string>2017-02-20-wechatResp.md</string>
+		</array>
+		<array>
+			<string>2017-02-21-4forClass.md</string>
 		</array>
 		<array>
 			<string>2016-04-22-dhamma.md</string>
@@ -438,7 +451,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>9cfad7b81ef5c07f55e18034c15e207df697cb49a72011bfd892f726eb729bb2</key>
-			<integer>83</integer>
+			<integer>87</integer>
 		</dict>
 	</dict>
 </dict>
