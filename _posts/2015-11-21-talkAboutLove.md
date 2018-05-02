@@ -7,7 +7,7 @@ categories:
 
 
 {% raw %}
-<iframe frameborder="20" border="20" marginwidth="10" marginheight="0" width="298" height="80" src="http://openmindclub.qiniudn.com/Yixuan/%E4%B9%B1%E4%B8%96%E4%BF%B1%E7%81%AD.mp3"></iframe>
+<iframe frameborder="20" border="20" marginwidth="10" marginheight="0" width="298" height="80" src="http://openmindclub.zoomquiet.top/Yixuan/%E4%B9%B1%E4%B8%96%E4%BF%B1%E7%81%AD.mp3"></iframe>
 {% endraw %}
 
 最近鬼使神差的迷上了一些电视剧, 也顺着回想起了很多位『前辈』的教导. 大概是去年初春, 一位台湾好友来北京见我, 看我心情低落, 又一心执着圆满, 她便道:『瑄仔, 大家都想做个好人. 可是有时候爱情就是这样的, 不是你死, 就是我亡.』
@@ -24,7 +24,7 @@ categories:
 
 既然没什么包袱, 那就在犄角旮旯里说句告别的话吧:
 
-> 你要做一个不动声色的大人了. 不准情绪化, 不准偷偷想念, 不准回头看. 去过自己另外的生活. 你要听话, 不是所有的鱼都会生活在同一片海里. __村上春树.
+> 你要做一个不动声色的大人了. 不准情绪化, 不准偷偷想念, 不准回头看. 去过自己另外的生活. 你要听话, 不是所有的鱼都会生活在同一片海里. \_\_村上春树.
 
 学会『去过自己另外的生活』,  虽然听起来蛮心酸的. 但也许, 真的过起来, 也会过的很不错. 一直觉得啊, 每一分, 每一秒, 每一个刹那都是不一样的. 应为此时此刻负责, 却不能私自妄动, 毁掉属于『未来自我』的自由、爱情和快乐.
 

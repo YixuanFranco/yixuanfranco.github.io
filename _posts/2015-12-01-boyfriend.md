@@ -6,11 +6,10 @@ categories:
 ---
 
 {% raw %}
-<iframe frameborder="20" border="20" marginwidth="10" marginheight="0" width="298" height="80" src="http://openmindclub.qiniudn.com/Yixuan/music/ohMyGod.mp3"></iframe>
+<iframe frameborder="20" border="20" marginwidth="10" marginheight="0" width="298" height="80" src="http://openmindclub.zoomquiet.top/Yixuan/music/ohMyGod.mp3"></iframe>
 {% endraw %}
 
-###开发文档の背景
-     
+### 开发文档の背景
 **萱小璧. ོYixuan** 14:58
 我有一个梦想：智能家居端茶倒水扫地做饭净化空气到点喂食儿
 
@@ -44,51 +43,54 @@ Zoom.ོQuiet 15:17
 **萱小璧. ོYixuan** 15:18
 不然简直对不起我的宿命
 
-###为了宿命
+### 为了宿命
 所以我们将开发 『蓝盆友』 品牌, 线上线下 360° 无死角满足你对男朋友的幻想.
 此项目为开源项目, 使用 `DO WHAT THE FUCK YOU WANT LICENSE`.
 
 1. 用户需求.
-  * 实现自动订饭功能.
-  * 实现每日 "甜言蜜语" 功能.
-  * 每日讲睡前小故事.
-  * 每周定保洁阿姨来打扫.
-  * 节日自动订花.
-  * 众筹基金.
-  * 男友拍照功能.
-  * 提醒月经周期.
-  * 定期讲小笑话.
-  * ...
+  2. 实现自动订饭功能.
+  3. 实现每日 "甜言蜜语" 功能.
+  4. 每日讲睡前小故事.
+  5. 每周定保洁阿姨来打扫.
+  6. 节日自动订花.
+  7. 众筹基金.
+  8. 男友拍照功能.
+  9. 提醒月经周期.
+  10. 定期讲小笑话.
+  11. ...
 
 2. 目标用户
-  * 结婚前木有男朋友可以使用.
-  * 结婚前有了男朋友觉得男朋友不好可以使用.
-  * 结婚后有了老公觉得老公不好可以使用.
-  * 离婚后可以使用.
-  * 流水的男人铁打的『蓝盆友』.
+  2. 结婚前木有男朋友可以使用.
+  3. 结婚前有了男朋友觉得男朋友不好可以使用.
+  4. 结婚后有了老公觉得老公不好可以使用.
+  5. 离婚后可以使用.
+  6. 流水的男人铁打的『蓝盆友』.
 
 3. 资金来源
-      * 支付宝账户: bailishanshan@foxmail.com
-      * 不要捐太多钱, 我们暂时用不到.
-      * 但会在 GitHub 做记录.
+	  * 支付宝账户: bailishanshan@foxmail.com
+	  * 不要捐太多钱, 我们暂时用不到.
+	  * 但会在 GitHub 做记录.
 
 4. 开发人员:
-      * 自愿加入.
-      * [项目地址](https://github.com/YixuanFranco/yourboyfriend)
-      * 盈利模式: 按功能项收费.
+	  * 自愿加入.
+	  * [项目地址][1]
+	  * 盈利模式: 按功能项收费.
 
 5. 开发目标.
-  * App
-  * 网页.
-  * 智能家居.
+  2. App
+  3. 网页.
+  4. 智能家居.
 
-###如何加入这个项目?
+### 如何加入这个项目?
 
 你可以...
 
-  * 补充你想要的需求. [补充地址](https://github.com/YixuanFranco/yourboyfriend/issues/2)
+  * 补充你想要的需求. [补充地址][2]
   * 补充你对男朋友的幻想.
   * 写下你会的编程语言.
   * 认领你想要实现的模块.
   * 认领你想要的项目职位.
   * 开始!
+
+[1]:	https://github.com/YixuanFranco/yourboyfriend
+[2]:	https://github.com/YixuanFranco/yourboyfriend/issues/2

@@ -6,14 +6,14 @@ categories:
 ---
 
 {% raw %}
-<iframe frameborder="20" border="20" marginwidth="10" marginheight="0" width="298" height="80" src="http://openmindclub.qiniudn.com/Yixuan/music/bagbag.mp3"></iframe>
+<iframe frameborder="20" border="20" marginwidth="10" marginheight="0" width="298" height="80" src="http://openmindclub.zoomquiet.top/Yixuan/music/bagbag.mp3"></iframe>
 {% endraw %}
 
 嗯哼, 开写之前我先声明一下版权, 这份秘笈是 Jesse 的妈妈 **Nancy** 阿姨教给我的. 我经过一些改良, 适应了中国人的口味, 才拿来用的.
 
 其实之前特别不理解为什么外国人喜欢干啃蔬菜, 感觉醉醉的. 后来自己尝, 哟, 真的觉得蛮不错的. 哈哈哈. 尤其我还发明了一种懒癌吃法, 就是 **就着面包片吃沙拉** (天哪我当年到底懒到什么境界). 我最喜欢吃的菜是 baby spinach, 真不是说英文... 是我也不知道中文叫什么啊, 可能叫娃娃菠菜? 还是上图吧, 当当当当! 就是这种蔬菜思密达:
 
-<img width="140" height="100" class="img-responsive" src="http://openmindclub.qiniudn.com/Yixuan/image/babySpinach.jpg">
+<img width="140" height="100" class="img-responsive" src="http://openmindclub.zoomquiet.top/Yixuan/image/babySpinach.jpg">
 
 
 
@@ -50,4 +50,4 @@ categories:
 
 `>_< 我去, this is freaking awesome.`
 
-<img width="120" height="90" class="img-responsive" src="http://openmindclub.qiniudn.com/Yixuan/image/spinachSalad.jpg">
+<img width="120" height="90" class="img-responsive" src="http://openmindclub.zoomquiet.top/Yixuan/image/spinachSalad.jpg">

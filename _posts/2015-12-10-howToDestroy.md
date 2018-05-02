@@ -5,9 +5,9 @@ categories:
 - trivial
 ---
 
-<img width="70" height="60" class="img-responsive" src="http://openmindclub.qiniudn.com/Yixuan/image/zly1.png">
+<img width="70" height="60" class="img-responsive" src="http://openmindclub.zoomquiet.top/Yixuan/image/zly1.png">
 {% raw %}
-<iframe frameborder="20" border="20" marginwidth="10" marginheight="0" width="298" height="80" src="http://openmindclub.qiniudn.com/Yixuan/music/qiuyanlianghangjiangshangyu.mp3"></iframe>
+<iframe frameborder="20" border="20" marginwidth="10" marginheight="0" width="298" height="80" src="http://openmindclub.zoomquiet.top/Yixuan/music/qiuyanlianghangjiangshangyu.mp3"></iframe>
 {% endraw %}
 
 
@@ -16,9 +16,9 @@ categories:
 ## 什么是核心攻击
 所谓 `核心攻击`, 并不是让被攻击者无法反驳, 而是让听众迅速倒戈, 剥夺听众理智. 几大核心攻击为:
 
-1. 性 + 被爆是小三.  
-2. 钱.  
-3. ...圈内人都知道...  
+1. 性 + 被爆是小三.
+2. 钱.
+3. ...圈内人都知道...
 
 
 `核心攻击` 最常用的领域为娱乐圈, 所谓爆黑料, 基本就是围绕着这几个核心攻击来的. 以下是一些经典的核心攻击(这些都是我 Google 出来的):
@@ -45,10 +45,10 @@ categories:
 
 核心攻击的特点是:  
 
-1. 可以瞬间击碎听众的 **思考能力**, 在最短的时间内让听众对某人产生厌恶感.  
-2. 除了被攻击人本人, 其他人几乎无法反驳, 或帮助被攻击人辩驳.  
-3. 简单粗暴的批量制造大量 『路人黑』.  
-4. 就算同一个套路路人已经听过无数次, 还是会无脑的相信.  
+1. 可以瞬间击碎听众的 **思考能力**, 在最短的时间内让听众对某人产生厌恶感.
+2. 除了被攻击人本人, 其他人几乎无法反驳, 或帮助被攻击人辩驳.
+3. 简单粗暴的批量制造大量 『路人黑』.
+4. 就算同一个套路路人已经听过无数次, 还是会无脑的相信.
 
 
 ## 女权为何容易坍塌
