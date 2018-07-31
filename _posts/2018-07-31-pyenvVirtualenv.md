@@ -5,7 +5,7 @@ categories:
 - Geek
 ---  
 
-![]()(/images/multi.png)
+![multi](/images/multi.png)
 
 问题是有一天, 我在群里抱怨, 为毛每次学习 **data science** 都要重装 Jupyter. 我仿佛一年已经重装了100次 jupyter.
 
@@ -13,11 +13,12 @@ categories:
 
 接下来就很像软广对白了.
 
-我: “到底为啥要用 pyenv 啊. 要用 Python3 吗?”
-大妈: “pyenv 可以集中管理配置主要 5 种 100 多版本的 Python 运行环境
-以及具体任何一个版本环境中和工程匹配的任意模块桟.”
+				我: “到底为啥要用 pyenv 啊. 要用 Python3 吗?”  
+				大妈: “pyenv 可以集中管理配置主要 5 种 100 多版本的 Python 运行环境  
+				以及具体任何一个版本环境中和工程匹配的任意模块桟.”  
 
-好, 听到这里我还是不甚明白. 总之我就想让 jupyter 在我的电脑里能够用, 最好也别影响我的 Python 2.7.  乍一听, pyenv 仿佛是可以解决我这个需求的. 于是开始作…
+好, 听到这里我还是不甚明白. 总之我就想让 jupyter 在我的电脑里能够用, 最好也别影响我的 Python 2.7.    
+乍一听, pyenv 仿佛是可以解决我这个需求的. 于是开始作…
 
 ### 1. 安装 pyenv 先  
 [完整的 pyenv 安装方式在这里](https://github.com/pyenv/pyenv)
@@ -58,14 +59,14 @@ categories:
 				cd Yixuan    
 				pyevn local 3.7.0  
 
-	然后再用 pyenv version 检验一下是否变幻成功即可.  
+	然后再用 **pyenv version** 检验一下是否变幻成功即可.  
 
 pyenv 有用的命令大概就这么多.   
 
 ### 3. 下面我们说说  pyenv-virtualenv
 
 安装文档是这个地址: https://github.com/pyenv/pyenv-virtualenv  
-不是 virtualenv, 是 pyenv-virtualenv. 我就安错了, 所以吓得我把原地址都放出来了.  
+不是 **virtualenv**, 是 **pyenv-virtualenv**. 我就安错了, 所以吓得我把原地址都放出来了.  
 
 安装命令是: **brew install pyenv-virtualenv**  
 
