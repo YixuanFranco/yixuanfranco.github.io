@@ -1,0 +1,24 @@
+{
+  "name": "yixuanfranco.github.io",
+  "version": "1.0.0",
+  "description": "Hi, 这是我从人家那个模板里 fork 过来的,   改了一些颜色. 因为蓝色实在是...让人感觉很微妙.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YixuanFranco/yixuanfranco.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YixuanFranco/yixuanfranco.github.io/issues"
+  },
+  "homepage": "https://github.com/YixuanFranco/yixuanfranco.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
+}
