@@ -3,8 +3,7 @@ title: 自我介绍
 author: Yixuan Li
 layout: page
 ---
-
-  <img width="300" height="400" alt="A photo of Yixuan" src="http://openmindclub.qiniudn.com/Yixuan/image/yixuan.jpg">
+< img width="300" height="400" alt="A photo of Yixuan" src="/images/yixuan.jpg">
 
 Hola, 我是 __Yixuan__. 我的人生理想啊... 远目, 那就是 __醉生梦死, 不劳而获__ 什么的. 当然有理想是好的, 徐徐图之是必须的. 嘿嘿. 当前主要活动就是窝在家做一只迷途小书虫.  副业就是创创业、编编程什么的. 人生核心原则: __用更懒的方式过更好的人生__.
 
@@ -46,10 +45,10 @@ Hola, 我是 __Yixuan__. 我的人生理想啊... 远目, 那就是 __醉生梦�
 4. 制片人.
 3. 写一个炫酷的网站.
 4. 建立自学者社群.[checked]
-5. 举办影展. 
+5. 举办影展.
 6. 玩遍全世界的蹦极.
 7. 找个蓝盆友...
-8. 画画. 
+8. 画画.
 9. 音乐专辑. [4/10]
 10. 2020 年前读够 2000 本书.[Dec, 2016 立]
 11. 2020 年前囚徒健身六艺皆到 Level 3. [Dec, 2016立]
