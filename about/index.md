@@ -3,7 +3,9 @@ title: 自我介绍
 author: Yixuan Li
 layout: page
 ---
-< img width="300" height="400" alt="A photo of Yixuan" src="/images/yixuan.jpg">
+<img width="300" height="400" alt="A photo of Yixuan"
+src="http://openmindclub.zoomquiet.top/Yixuan/image/yixuan.jpg">
+
 
 Hola, 我是 __Yixuan__. 我的人生理想啊... 远目, 那就是 __醉生梦死, 不劳而获__ 什么的. 当然有理想是好的, 徐徐图之是必须的. 嘿嘿. 当前主要活动就是窝在家做一只迷途小书虫.  副业就是创创业、编编程什么的. 人生核心原则: __用更懒的方式过更好的人生__.
 
