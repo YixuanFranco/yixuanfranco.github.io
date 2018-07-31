@@ -54,7 +54,7 @@ categories:
 5. **pyenv global 3.7.0**    
 	这个命令是, 把整台电脑都变换为 Python 3.7.0 的环境. 变换完之后, 可以用上面学过的 **pyenv version** 查看一下是否已经变换成功.
 6. **pyenv local 3.7.0**   
-	如果我建立了一个项目文件夹, 名叫 **Yixuan**, 我想把 **Yixuan** 这个文件夹的环境变为 Python 的 3.7.0 的话, 我就可以   
+	如果我建立了一个项目文件夹, 名叫 **Yixuan**, 我想把 **Yixuan** 这个文件夹的环境变为 Python 的 3.7.0 的话, 我就可以:  
 
     cd Yixuan    
     pyevn local 3.7.0  
