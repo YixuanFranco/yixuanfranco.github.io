@@ -9,7 +9,7 @@ categories:
 
 问题是有一天, 我在群里抱怨, 为毛每次学习 **data science** 都要重装 Jupyter. 我仿佛一年已经重装了100次 jupyter.
 
-于是大妈怼道, “所以让你装 **pyenv**呐, 提醒过很多次了.”
+于是大妈怼道, “所以让你装 **pyenv** 呐, 提醒过很多次了.”
 
 接下来就很像软广对白了.
 
@@ -17,7 +17,7 @@ categories:
     大妈: “pyenv 可以集中管理配置主要 5 种 100 多版本的 Python 运行环境  
     以及具体任何一个版本环境中和工程匹配的任意模块桟.”  
 
-好, 听到这里我还是不甚明白. 总之我就想让 jupyter 在我的电脑里能够用, 最好也别影响我的 Python 2.7.    
+好, 听到这里我还是不甚明白. 总之我就想要一个 jupyter 的推荐环境 Python3(2里面实在太多坑啦), 最好也别影响我的 Python2.    
 乍一听, pyenv 仿佛是可以解决我这个需求的. 于是开始作…
 
 ### 1. 安装 pyenv 先  
@@ -41,20 +41,20 @@ categories:
 	这个命令会罗列出所有可用的版本.      
 	![pyenvInstallL](/images/pyenvInstallL.png)   
 2. **pyenv install 3.7.0**    
-	这个命令可以让你在电脑上装上 Python 的 3.7.0 版本. 如果你想装别的可用版本, 可以把 3.7.0 替换成别的东西.  
+	你可以选择一个可用版本来进行安装. 这个命令可以让你在电脑上装上 Python 的 3.7.0 版本. 如果你想装别的可用版本, 可以把 3.7.0 替换成别的东西.  
 3. **pyenv versions**   
-	查查你现在已经拥有什么版本的 Python 了.  
+	安装完毕后, 你可以查查你现在已经拥有什么版本的 Python 了.
 	![pyenvVersions](/images/pyenvVersions.png)     
-	这是我目前已经有的版本, system 前面有个小星星, 证明我现在整个电脑的 Python 版本是系统自带的 Python 版本(可以用 python —version 来查询).  
+	这是我目前已经有的版本, system 前面有个 **小星星**, 证明我现在整个电脑的 Python 版本是系统自带的 Python 版本(可以用 python --version 来查询).  
 4.  **pyenv version**    
 	注意, 这个命令符的结尾少了一个 s. 和上一个命令不一样.  
 	这个命令行的作用是, 看看你目前处在哪个版本里.  
 	![pyenvVersion](/images/pyenvVersion.png)    
 	为了方便你看一下这两个命令的区别, 我把效果一起截图啦  
 5. **pyenv global 3.7.0**    
-	这个命令是, 把整台电脑都变换为 Python 3.7.0 的环境. 变换完之后, 可以用上面学过的**pyenv version** 查看一下是否已经变换成功.
+	这个命令是, 把整台电脑都变换为 Python 3.7.0 的环境. 变换完之后, 可以用上面学过的 **pyenv version** 查看一下是否已经变换成功.
 6. **pyenv local 3.7.0**   
-	如果我建立了一个项目文件夹, 名叫 **Yixuan**, 我想把 Yixuan 这个文件夹的环境变为 Python 的 3.7.0 的话, 我就可以   
+	如果我建立了一个项目文件夹, 名叫 **Yixuan**, 我想把 **Yixuan** 这个文件夹的环境变为 Python 的 3.7.0 的话, 我就可以   
 
     cd Yixuan    
     pyevn local 3.7.0  
@@ -66,7 +66,8 @@ pyenv 有用的命令大概就这么多.
 ### 3. 下面我们说说  pyenv-virtualenv
 
 安装文档是这个地址: https://github.com/pyenv/pyenv-virtualenv  
-不是 **virtualenv**, 是 **pyenv-virtualenv**. 我就安错了, 所以吓得我把原地址都放出来了.  
+不是 **virtualenv**, 是 **pyenv-virtualenv**.   
+我就安错了, 所以吓得我把原地址都放出来了.  
 
 安装命令是:
 
@@ -88,7 +89,7 @@ pyenv 有用的命令大概就这么多.
 2. 咋用?
 	比如我现在建立了一个文件夹叫 jupyter, 我想要给这个 jupyter 一个 Python3.7.0 的环境.  
 	命令: **pyenv virtualenv 3.7.0 jupyter**  
-	然后你在这里面装上各种的 jupyter.  
+	然后你在这里面装上 jupyter.   
 
 	而这个时候…你再用 **pyenv versions**这个命令行, 会发现环境里面多了一个:
 	![jupyterEvn](/images/jupyterEvn.jpg)   
