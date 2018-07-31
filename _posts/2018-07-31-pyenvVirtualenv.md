@@ -25,8 +25,8 @@ categories:
 
 这里我只说 Mac 的安装方法:  
 
-				$ brew update  
-				$ brew install pyenv   
+    $ brew update  
+    $ brew install pyenv   
 
 ### 2. pyenv 怎么用  
 
