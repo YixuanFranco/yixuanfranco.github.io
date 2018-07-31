@@ -45,7 +45,7 @@ categories:
 3. **pyenv versions**   
 	安装完毕后, 你可以查查你现在已经拥有什么版本的 Python 了.
 	![pyenvVersions](/images/pyenvVersions.png)     
-	这是我目前已经有的版本, system 前面有个 **小星星**, 证明我现在整个电脑的 Python 版本是系统自带的 Python 版本(可以用 python --version 来查询).  
+	这是我目前已经有的版本, system 前面有个 **小星星**, 证明我现在整个电脑的 Python 版本是系统自带的 Python 版本(可以用 **python --version** 来查询).  
 4.  **pyenv version**    
 	注意, 这个命令符的结尾少了一个 s. 和上一个命令不一样.  
 	这个命令行的作用是, 看看你目前处在哪个版本里.  
@@ -56,8 +56,8 @@ categories:
 6. **pyenv local 3.7.0**   
 	如果我建立了一个项目文件夹, 名叫 **Yixuan**, 我想把 **Yixuan** 这个文件夹的环境变为 Python 的 3.7.0 的话, 我就可以   
 
-    cd Yixuan    
-    pyevn local 3.7.0  
+     cd Yixuan    
+     pyevn local 3.7.0  
 
 	然后再用 **pyenv version** 检验一下是否变幻成功即可.  
 
