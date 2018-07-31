@@ -13,9 +13,9 @@ categories:
 
 接下来就很像软广对白了.
 
-				我: “到底为啥要用 pyenv 啊. 是为了使用 Python3 吗?”  
-				大妈: “pyenv 可以集中管理配置主要 5 种 100 多版本的 Python 运行环境  
-				以及具体任何一个版本环境中和工程匹配的任意模块桟.”  
+    我: “到底为啥要用 pyenv 啊. 是为了使用 Python3 吗?”  
+    大妈: “pyenv 可以集中管理配置主要 5 种 100 多版本的 Python 运行环境  
+    以及具体任何一个版本环境中和工程匹配的任意模块桟.”  
 
 好, 听到这里我还是不甚明白. 总之我就想让 jupyter 在我的电脑里能够用, 最好也别影响我的 Python 2.7.    
 乍一听, pyenv 仿佛是可以解决我这个需求的. 于是开始作…
@@ -32,9 +32,9 @@ categories:
 
 逻辑:  
 
-				1. 先查查有哪些可以用的版本   
-				2. 将这个版本下载下来  
-				3. 切换来...切换去...切换来...切换去    
+    1. 先查查有哪些可以用的版本   
+    2. 将这个版本下载下来  
+    3. 切换来...切换去...切换来...切换去    
 
 可用命令:
 1. **pyenv install -l**    
@@ -56,8 +56,8 @@ categories:
 6. **pyenv local 3.7.0**   
 	如果我建立了一个项目文件夹, 名叫 **Yixuan**, 我想把 Yixuan 这个文件夹的环境变为 Python 的 3.7.0 的话, 我就可以   
 
-				cd Yixuan    
-				pyevn local 3.7.0  
+    cd Yixuan    
+    pyevn local 3.7.0  
 
 	然后再用 **pyenv version** 检验一下是否变幻成功即可.  
 
@@ -70,13 +70,13 @@ pyenv 有用的命令大概就这么多.
 
 安装命令是:
 
-				brew install pyenv-virtualenv   
+    brew install pyenv-virtualenv   
 
 大妈提醒, 里面有巨坑一个. 记得在 **/.bash\_profile** (如果你是 zsh 的话, 建议在 **/.zshrc**)里写入:  
 
-				export PATH="~/.pyenv/bin:$PATH"    
-				eval "$(pyenv init -)"    
-				eval "$(pyenv virtualenv-init -)"    
+    export PATH="~/.pyenv/bin:$PATH"    
+    eval "$(pyenv init -)"    
+    eval "$(pyenv virtualenv-init -)"    
 
 大妈提示道: 这三行是他反复明确, 不能缺少和错误的!!!  
 
