@@ -39,7 +39,8 @@ Hola, 我是 __Yixuan__. 原产地北京, 世界居民. 我的人生理想啊...
 3. [LinkedIn][4]
 4. [豆瓣][5]
 5. [GitHub][6]
-6. [如何记忆一本书 \| 成为最强大脑][8]
+6. [如何记忆一本书(Udemy) \| 成为最强大脑][8]
+8. [如何记忆一本书(网易云课堂) \| 国内学员使用 ][9]
 7. 饭否就不给了.
 
 ## Checklist 未完成
@@ -75,3 +76,4 @@ Hola, 我是 __Yixuan__. 原产地北京, 世界居民. 我的人生理想啊...
 [6]:	https://github.com/YixuanFranco
 [7]:	mailto:me@yixuan.li
 [8]:    https://www.udemy.com/brainhack101/?couponCode=GETCOURSEFOR10DOLLAR
+[9]:    https://study.163.com/course/introduction.htm?courseId=1004813001
