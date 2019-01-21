@@ -50,18 +50,19 @@ title: Home
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path }}" >
       Previous
     </a>
   {% else %}
-    <span class="previous">Previous</span>
+    <span class="pagination-item newer">Previous</span>
   {% endif %}
+
   <span class="page_number ">
     Page: {{ paginator.page }} of {{ paginator.total_pages }}
   </span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    <a class="pagination-item older" href="{{ paginator.next_page_path }}" >Next</a>
   {% else %}
-    <span class="next ">Next</span>
+    <span class="pagination-item older">Next</span>
   {% endif %}
 </div>
