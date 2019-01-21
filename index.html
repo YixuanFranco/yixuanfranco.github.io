@@ -24,11 +24,12 @@ title: Home
 </div>
 
 <!--这个是Home页的样子...-->
-<div class="pagination">
 
+<!--弃用
+<div class="pagination">
   {% if paginator.next_page %}
-    <!--<a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>-->
-    <a class="pagination-item older" href="page{{paginator.next_page}}">Older</a>
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+
   {% else %}
     <span class="pagination-item older">Older</span>
   {% endif %}
@@ -37,10 +38,30 @@ title: Home
     {% if paginator.page == 2 %}
       <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
     {% else %}
-      <!--<a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>-->
-      <a class="pagination-item newer" href="page{{paginator.previous_page}}">Newer</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+
     {% endif %}
   {% else %}
     <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
+-->
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+      Previous
+    </a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
   {% endif %}
 </div>
