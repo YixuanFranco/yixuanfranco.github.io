@@ -83,15 +83,15 @@ categories:
 
 按照自己摸索和官方指示, 坑就这么几个:  
 
-1. 你没耐心.  
+1. **你没耐心.**  
 无论是在 DNS 上加 A record, 还是 **Enforce HTTPS**, 都需要等待一段时间. 不要疑神疑鬼疯狂刷新自己的 blog. 耐心的等就是了. 如果有错误, GitHub 会给你提示的.
-2. HTTP > https  
+2. **HTTP > https**  
 注意你的 CSS, JS 和图片引用不要出问题. 因为我们已经改为了 HTTPS, 确保你引用的也是 HTTPS. 否则可能会炸.
-3. 小概率事件:  
+3. **小概率事件:**    
 If you're using an A record that points to **207.97.227.245 or 204.232.175.78**, you'll need to update your DNS settings, as we no longer serve Pages directly from those servers.  
 如上所嗯哼...不过这么古老的 IP 估计已经没人在用了吧.
 
 
 
-PPPPP.S:   
+**PPPPP.S:**   
 总之一切坑及梗已经在开头的两个参考教程中完备, 所有的坑都已经递归到开头的两个 links 中. 大家各显神通吧.
