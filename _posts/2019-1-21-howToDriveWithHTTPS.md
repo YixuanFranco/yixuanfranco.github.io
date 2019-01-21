@@ -15,8 +15,8 @@ categories:
 简要分析了一下, 目测作起来很简单, 所以开始作...
 
     参考教程:
-    1. [GitHub Pages HTTPS 设置 | 查错指南][1]
-    2. [如何给你的 GitHub Pages 加上 HTTPS 证书][2]
+    1. [GitHub Pages HTTPS 设置 | 查错指南][https://help.github.com/articles/troubleshooting-custom-domains/]
+    2. [如何给你的 GitHub Pages 加上 HTTPS 证书][https://help.github.com/articles/securing-your-github-pages-site-with-https/]
 
 作完后成果:
 
@@ -95,6 +95,3 @@ If you're using an A record that points to **207.97.227.245 or 204.232.175.78**,
 
 **PPPPP.S:**   
 总之一切坑及梗已经在开头的两个参考教程中完备, 所有的坑都已经递归到开头的两个 links 中. 大家各显神通吧.
-
-[1]: https://help.github.com/articles/troubleshooting-custom-domains/
-[2]: https://help.github.com/articles/securing-your-github-pages-site-with-https/
