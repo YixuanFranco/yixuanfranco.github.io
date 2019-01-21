@@ -58,12 +58,15 @@ title: Home
   {% endif %}
 
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path }}" >Next</a>
+    <a class="pagination-item older" href="{{ paginator.next_page_path }}" >
+      Next
+    </a>
   {% else %}
     <span class="pagination-item older">Next</span>
   {% endif %}
-
+  <div>
   <span class="page_number ">
     Page: {{ paginator.page }} of {{ paginator.total_pages }}
   </span>
+  </div>
 </div>
