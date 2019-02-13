@@ -82,7 +82,7 @@ categories:
 
 再次硬广, 可以点击关注一下微信公众号→[马村的夏天][13].
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>本作品采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> 进行许可. 如需转载, 请标明 **Yixuan + 源地址**
+
 
 [1]:	http://www.udacity.com
 [2]:	http://www.codecademy.com

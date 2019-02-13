@@ -64,5 +64,3 @@ XX 是 XX 的 sex toy 好吗(性), 早几年还被富商包养(钱), 大家都�
 那些无辜的, 在舆论下苦苦生存的人物. 他们可能很努力, 很认真的生活着. 却被那些信口开河, 不为自己言行负责的人的几句话彻底击垮, 让我们沦为帮凶. 这种操控是可恶的, 可耻的. 我们也不应在被这些可恶、可耻的人继续操控.
 
 把这些核心攻击记在脑袋中吧, 下次再听到这些鬼话, 竖起你的中指, 让他们知道什么叫正义.
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>本作品采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> 进行许可. 如需转载, 请标明 **Yixuan + 源地址**
