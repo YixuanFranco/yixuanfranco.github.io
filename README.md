@@ -21,5 +21,6 @@ Mar.13, 2016 __Yixuan 亲笔
 * 已于 `May 30, 2016` 解决了音乐播放器不能用的问题.   
 * 已于 `Jan 21, 2019` 解决了文章翻页问题, 及 404.html 爆炸问题.
 * 已于 `Jan 21, 2019` 添加 HTTPS 证书.
+* 已于 `Feb 13, 2019` 添加 [utterances](https://utteranc.es/?installation_id=664872&setup_action=install) 评论插件. 以解决国内无法访问 disqus 的问题. 不过留下一个梗, 就是如果在国外, 可以同时看到 disqus 和 utterances. 随便了...留个 bug 留给后人看吧. 耻辱柱嘤嘤嘤...
 
 * [Yixuan的极客绿]( http://yixuan.li/)
