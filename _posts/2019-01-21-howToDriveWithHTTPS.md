@@ -15,8 +15,8 @@ categories:
 简要分析了一下, 目测作起来很简单, 所以开始作...
 
     参考教程:
-    1. [GitHub Pages HTTPS 设置 | 查错指南][https://help.github.com/articles/troubleshooting-custom-domains/]
-    2. [如何给你的 GitHub Pages 加上 HTTPS 证书][https://help.github.com/articles/securing-your-github-pages-site-with-https/]
+    1. [GitHub Pages HTTPS 设置 | 查错指南](https://help.github.com/articles/troubleshooting-custom-domains/)
+    2. [如何给你的 GitHub Pages 加上 HTTPS 证书](https://help.github.com/articles/securing-your-github-pages-site-with-https/)
 
 作完后成果:
 
