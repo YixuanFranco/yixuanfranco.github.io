@@ -56,7 +56,7 @@ Hola, 我是 __Yixuan__. 原产地北京, 世界居民. 我的人生理想啊...
 10. 2020 年前读够 2000 本书.[Dec, 2016 立]
 11. 2020 年前囚徒健身六艺皆到 Level 3. [Dec, 2016立]
 12. [用动画做完一门课程][8]. [checked]
-13. 设计了一套微信表情包. [2019 Checked]
+13. [设计了一套微信表情包][10]. [2019 Checked]
 14. 待增补 ing…
 
 ## 嗷!
@@ -76,3 +76,4 @@ Hola, 我是 __Yixuan__. 原产地北京, 世界居民. 我的人生理想啊...
 [7]:	mailto:me@yixuan.li
 [8]:    https://www.udemy.com/brainhack101/?couponCode=GETCOURSEFOR10DOLLAR
 [9]:    https://study.163.com/course/introduction.htm?courseId=1004813001
+[10]:    https://sticker.weixin.qq.com/cgi-bin/mmemoticon-bin/emoticonview?oper=single&t=shop/detail&productid=aL2PCfwK/89qO7sF6/+I+UDhfwEjhec2ZNvdnLLJRd/PnXIW5JizXRBrQkIHHd2exqc4/6ch95LuRVTQ0XqVgUsjGJMHwDl4S246bixwBvwc=
