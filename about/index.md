@@ -59,6 +59,10 @@ Hola, 我是 __Yixuan__. 原产地北京, 世界居民. 我的人生理想啊...
 13. [设计了一套微信表情包][10]. [2019 Checked]
 14. 待增补 ing…
 
+
+> PressOne License: 
+> https://press.one/p/v?s=d20eade9665e3e5cb82b9cb7bd5795a073c16291fa1dbcb2bc73ad795d5ba70e62e08c9b909b1769f1ae20399873c1e12360fa1dcb85f634422855d1580823580&h=82abc6314993f800c80ff275701d5df423f09525bb0777b04266a781f3945986&a=fe0d8bccb2992e5cf49d7399134df19dc30963fe&f=P1&v=3
+
 ## 嗷!
 
 如果想跟俺聊聊, __[欢迎来信][7]__.
