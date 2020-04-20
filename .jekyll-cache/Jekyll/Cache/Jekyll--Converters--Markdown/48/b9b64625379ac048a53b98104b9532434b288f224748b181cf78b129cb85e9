@@ -1,0 +1,98 @@
+I"u<h2 id="背景">背景</h2>
+
+<p>打算在 udemy 开设一门供小白使用的 <strong>GitHub Pages</strong> 课程, 于是强迫自己使用小白的操作习惯, 用鼠标 <strong>点点点</strong> 浏览 GitHub 的仓库. 结果发现在仓库的 setting 选项中, 竟然有强制设置 HTTPS 选项了.</p>
+
+<p><img src="/images/https.png" alt="GitHubPagesHttps" /></p>
+
+<p>简要分析了一下, 目测作起来很简单, 所以开始作…</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>参考教程:
+1. [GitHub Pages HTTPS 设置 | 查错指南](https://help.github.com/articles/troubleshooting-custom-domains/)
+2. [如何给你的 GitHub Pages 加上 HTTPS 证书](https://help.github.com/articles/securing-your-github-pages-site-with-https/)
+</code></pre></div></div>
+
+<p>作完后成果:</p>
+
+<p><img src="/images/driveWithHttps.png" alt="driveWithHttps.png" /></p>
+
+<p>:) 成功持证驾驶了是也乎…</p>
+
+<h2 id="分析">分析</h2>
+
+<p>主要的流程貌似只有三个:</p>
+<ul>
+  <li>在你的域名上增补新的 DNS Record.(万网, 狗爹, NameCheap, etc.)</li>
+  <li>在 GitHub 的 setting 选项里, 把 <strong>Custom domain</strong> 删除后再添加.</li>
+  <li>在 GitHub 的 setting 选项里, 选中 <strong>Enforce HTTPS</strong>.</li>
+</ul>
+
+<h2 id="实操">实操</h2>
+
+<h3 id="1-在域名上增补新的-dns-record">1. 在域名上增补新的 DNS Record</h3>
+
+<p>我的域名是在 <strong>NameCheap</strong> 上购买的, 所以直接按照教程所述, 在域名上加上这些 IP, 类型是<strong>A records</strong>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If you configured A records through your DNS provider, your A records must point your custom domain to the following IP addresses:
+
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+</code></pre></div></div>
+
+<p>如图所示:</p>
+
+<p><img src="/images/newDNS.png" alt="newDNS" /></p>
+
+<p>注意: 更新完 IP 后, 可能需要一定的时间才能生效. 需要用命令行 dig 一下. 把下面命令行中的 <strong>example.com</strong> 改为你的博客地址即可.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dig +noall +answer example.com
+</code></pre></div></div>
+
+<p>如果输出的结果依旧是:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>example.com		22903	IN	A	192.30.252.153
+</code></pre></div></div>
+
+<p>那么就还没有更新成功, 需要再等等. 如果输出的结果中包含:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>example.com			21313	IN	A	185.199.111.153
+example.com			21313	IN	A	185.199.109.153
+example.com			21313	IN	A	185.199.108.153
+example.com			21313	IN	A	185.199.110.153
+</code></pre></div></div>
+
+<p>那么新的 IP 已经绑定到了域名上, 我们就添加成功了 :)</p>
+
+<h3 id="2-在-github-的网页上打开你的项目">2. 在 GitHub 的网页上打开你的项目.</h3>
+
+<p>点开 <strong>setting</strong> 选项:</p>
+
+<p><img src="/images/setting.png" alt="setting" /></p>
+
+<ul>
+  <li>向下滚动到 <strong>GitHub Pages &gt; Custom domain</strong>, 把里面的域名删除后, 点击 save.</li>
+  <li>然后再重新添加, 点击 save.</li>
+</ul>
+
+<h3 id="3-然后选中-enforce-https-等待一段时间即可-直到有一个绿色条显示">3. 然后选中 <strong>Enforce HTTPS</strong>, 等待一段时间即可. 直到有一个绿色条显示:</h3>
+<p><img src="/images/published.png" alt="publishe" />
+就可以去网页上看看啦!</p>
+
+<h2 id="注意的点">注意的点.</h2>
+
+<p>按照自己摸索和官方指示, 坑就这么几个:</p>
+
+<ol>
+  <li><strong>你没耐心.</strong><br />
+无论是在 DNS 上加 A record, 还是 <strong>Enforce HTTPS</strong>, 都需要等待一段时间. 不要疑神疑鬼疯狂刷新自己的 blog. 耐心的等就是了. 如果有错误, GitHub 会给你提示的.</li>
+  <li><strong>HTTP &gt; https</strong><br />
+注意你的 CSS, JS 和图片引用不要出问题. 因为我们已经改为了 HTTPS, 确保你引用的也是 HTTPS. 否则可能会炸.</li>
+  <li><strong>小概率事件:</strong>  <br />
+If you’re using an A record that points to <strong>207.97.227.245 or 204.232.175.78</strong>, you’ll need to update your DNS settings, as we no longer serve Pages directly from those servers.<br />
+如上所嗯哼…不过这么古老的 IP 估计已经没人在用了吧.</li>
+</ol>
+
+<p><strong>PPPPP.S:</strong> <br />
+总之一切坑及梗已经在开头的两个参考教程中完备, 所有的坑都已经递归到开头的两个 links 中. 大家各显神通吧.</p>
+:ET

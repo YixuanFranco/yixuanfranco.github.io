@@ -1,0 +1,184 @@
+I"�<p>2015 年 11 月 10 日, 我用 TermRecord 录制了一个视频, 从微信传给大妈审核, 然而大妈拿着手机看不到.  大妈结论: 可见没有一个任性发布标准 URL 的渠道多忧桑…→_→</p>
+
+<p>梗已经接到, 于是开始折腾:</p>
+
+<ul>
+  <li><a href="https://github.com/OpenMindClub/2.OMOOC.py/issues/70">7牛作为图床</a></li>
+  <li>面向中国用户, 使用 GitHub 作为图床时而会炸. 所以建议我们使用七牛.</li>
+  <li><a href="http://blog.zhgdg.org/2013-08/usage7niu/">大妈的教程</a></li>
+  <li>以上是我收集到的梗.</li>
+</ul>
+
+<h2 id="分析">分析</h2>
+<ol>
+  <li>先把七牛的命令什么的搞定.</li>
+  <li>再传视频.</li>
+  <li>生成链接, 发给大妈, 问题就解决了.</li>
+</ol>
+
+<h2 id="开始">开始!</h2>
+
+<ol>
+  <li><a href="http://docs.qiniu.com/tools/v6/qrsync.html">qrsync</a>
+不想用 7 牛的 用户界面, 于是先把命令行解决吧.<br />
+* 这个链接里, 包括 <strong>工具</strong> + <strong>配置方法</strong></li>
+</ol>
+
+<ul>
+  <li>下载好文件夹. 进入文件夹, <code class="highlighter-rouge">touch conf.json</code>
+    <ul>
+      <li><code class="highlighter-rouge">vi conf.json</code> 敲 i 开始编辑文件.</li>
+      <li>按照教程说, 把下面的东西 粘贴进去, 改成自己的:</li>
+    </ul>
+  </li>
+</ul>
+
+<p>版本一:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'{
+    "access\_key": "Please apply your access key here",
+    "secret\_key": "Dont send your secret key to anyone",
+    "bucket": "Bucket name on qiniu resource storage",
+    "sync\_dir": "Local directory to upload",
+    "async\_ops": "fop1;fop2;fopN",
+    "debug\_level": 1
+}
+</code></pre></div></div>
+
+<p><a href="http://developer.qiniu.com/docs/v6/tools/qrsync.html">版本2:</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'{
+    "src": "/home/your/sync\_dir",
+    "dest": "qiniu:access\_key=&lt;AccessKey&gt;&amp;secret\_key=&lt;SecretKey&gt;&amp;bucket=&lt;Bucket&gt;&amp;key\_prefix=&lt;KeyPrefix&gt;&amp;threshold=&lt;Threshold&gt;",
+    "debug\_level":  1
+}
+</code></pre></div></div>
+
+<h2 id="先说一下我踩到的梗">先说一下我踩到的梗:</h2>
+
+<ul>
+  <li>我一开始 不知道 Bucket 是什么, 所以按照教程说的 , 我随便写的. 结果上传不上.
+    <ul>
+      <li>于是才发现, Bucket 是有规定的, 是自己建立的 空间 名.(详见: 下方 Bucket 解析.)</li>
+    </ul>
+  </li>
+  <li>然后大妈给的我 版本二 的 conf.json 文件, 在复制 access key时, 鬼使神差的 把key 复制到 &lt;&gt; 中了.
+    <ul>
+      <li>记住, 这个必须删掉. 所以你复制好了之后应该是 access_key=….. 而不是 access_key=&lt;….&gt;</li>
+      <li>大妈云: 类似 <key> [key] {key} 都叫模板占位符, 标明这里要配置的,但是,不包含 \&lt;\&gt; [] {} 什么的标签,那是为了区分正常字串用的,,,</key></li>
+    </ul>
+  </li>
+  <li>类似 key_profix 等等各种附加功能配置,从来都是可选, 没有特殊场景是不用的.</li>
+  <li>七牛一般账户只能上传富文本, 只有如果上传不上去, 付费吧…</li>
+</ul>
+
+<p><strong>解析一下上面的 conf.json 是什么意思.</strong></p>
+
+<ul>
+  <li>acccess_key 和 secret_key, 都是你自己的七牛用户里特有的.
+    <ul>
+      <li>账号→ 密匙 → 就可以看到这两个 Key, 复制粘贴到文件里就可以了.</li>
+      <li><strong>小白提示</strong>: 粘贴的时候不要去掉 “ “, 要粘贴到 “ “中间.</li>
+    </ul>
+  </li>
+  <li>bucket:
+    <ul>
+      <li>在七牛左上角, 新建 一个空间.</li>
+      <li>bucket 就是你的空间名称.</li>
+      <li>比如:
+        <ul>
+          <li>我的空间叫 yixuanfranco</li>
+          <li>那么, 我的配置应该是 “bucket”:”yixuanfranco”</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>sync_dir: 是你的本地文件夹的地址.
+    <ul>
+      <li>可以在本地建立一个文件夹, 然后把他的绝对地址粘贴上.</li>
+      <li><strong>小白提示</strong>: pwd 可以知道你 文件夹 的绝对地址.</li>
+    </ul>
+  </li>
+  <li><strong>版本一 conf.json</strong>:其他的东西 可以暂时不用管它. 保留就好.</li>
+  <li><strong>版本二 conf.json</strong>: 把 &amp;key_prefix=<KeyPrefix>&amp;threshold=<Threshold> 先删掉, 需要的时候再加. 跑通了再说.</Threshold></KeyPrefix></li>
+</ul>
+
+<p>所以, 这个文件的逻辑已经非常清楚了:</p>
+
+<ul>
+  <li>检测 access key + secret key, 确定你的身份.</li>
+  <li>确定你要上传到的空间.</li>
+  <li>把本地 库的内容 上传到七牛的 空间中.</li>
+</ul>
+
+<p><strong>Checklist</strong>:</p>
+
+<ul>
+  <li>下载了 qrsync.</li>
+  <li>新建+配置了 conf.json.</li>
+  <li>在你本地的文件夹里 随便放一点文件.</li>
+</ul>
+
+<p>做完上述所有内容后, 我们就可以开始上传东西了:<br />
+<code class="highlighter-rouge">./qrsync conf.json</code>
+运行命令, 即可上传你的文件了!</p>
+
+<ul>
+  <li>要在 qrsync 前加 ./ , 不然可能运行不了.</li>
+  <li>我一开始就没运行成功.</li>
+</ul>
+
+<h2 id="到哪里去看我生成的-url-呢">到哪里去看我生成的 URL 呢？</h2>
+<ol>
+  <li>先查看一下自己 <strong>空间</strong> 的设置.
+    <ul>
+      <li>进入到自己的空间里.</li>
+      <li>点击空间设置.</li>
+      <li>点击域名设置, 就可以看到自己的域名了.</li>
+    </ul>
+  </li>
+  <li>怎么查看文件?
+    <ul>
+      <li>你可能会发现, 打开自己的域名, 里面什么都没有. 是个 404 界面.</li>
+      <li>你需要 域名/文件名 打开自己上传的文件.
+        <ul>
+          <li>比如, 我刚刚说, 在本地的文件夹里, 随便放一些东西.</li>
+          <li>我们假设你放了 yixuan.md 好了.</li>
+          <li>那么,查看这个文件的方式为: 域名/yixuan.md.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="补充">补充</h2>
+
+<ul>
+  <li>生成目录的命令:
+    <ul>
+      <li><code class="highlighter-rouge">python gen4idx.py ./ footer-7niu.html NULL</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>^_^ 希望你一切都搞定了.</p>
+
+<ul>
+  <li>如果没搞定的话, 可以 发<strong>邮件</strong>至 liyixuan5402@gmail.com 联系我.</li>
+  <li>或者, 加我的 <strong>facebook</strong>: liyixuan5402@hotmail.com</li>
+</ul>
+
+<h2 id="pps-nov26-2016-1022">PPS. Nov.26, 2016 10:22</h2>
+
+<blockquote>
+  <p>因为 qrsync 不能用了, 于是昨天折腾了会, 把新的 qshell 折腾明白了. 下面的补充算是给我自己看的. qshell 至今没搞明白到底怎么增量上传, 一上传就传全部也是炸了.  whatever, 写在这里给自己备份一下.</p>
+  <ol>
+    <li>本地快照:
+ <code class="highlighter-rouge">./qshell dircache /Users/mac/Desktop/TheSummerofMQT/Qiniu ao.md </code></li>
+    <li>同步七牛:
+`./qshell qupload 10 conf.json
+```</li>
+  </ol>
+</blockquote>
+
+:ET

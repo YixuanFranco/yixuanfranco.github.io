@@ -1,0 +1,58 @@
+I"q
+<h2 id="背景">背景</h2>
+
+<p>由于公司小妹<code class="highlighter-rouge">徒手</code>大量删除微信用户, 于是需要手动把这些家伙都加回来. 我当时是懵逼的. 略扫了一下麦客表, 炸裂! 400+ 条…真的要手动的加吗…吗…吗…拒绝! 一定有别的方法!</p>
+
+<h2 id="分析">分析</h2>
+
+<p>受到了极大的惊吓后, 睡了一觉冷静了一下, 于是仔细思考:摆在我面前的, 可行的有两条路,</p>
+
+<ol>
+  <li>把麦客表转成 <code class="highlighter-rouge">QQ</code> 的联系方式, 然后同步到微信的联系人上.</li>
+  <li>把麦客表转成 <code class="highlighter-rouge">手机</code> 能识别的联系方式, 然后通过微信的: <code class="highlighter-rouge">用手机添加好友</code>的方式, 来批量显示好友. 这样就不用一个个输入了!</li>
+</ol>
+
+<ul>
+  <li>手头有什么?
+    <ul>
+      <li>Android 手机一只.</li>
+      <li>Mac Pro 一台.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="开始折腾">开始折腾!</h2>
+
+<ol>
+  <li>发现<code class="highlighter-rouge">麦客</code>可以导出 Excel, 不管了, 把数据导到本地再说.</li>
+  <li>
+    <p>然后, Excel 可以直接用 Mac 自带的 Numbers 软件打开!</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 打开后写了一个小小的 filter, 把不要的数据都过滤掉. 确认过滤掉了之后, 把没用的 columns 也删掉, 只留 姓名+电话 两行.
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>然后就可以直接导出为 CSV 格式的文件啦!</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 于是, 尝试把 CSV 文件直接扔到安卓手机里, 发现无法同步...懵掉. 嗯嗯嗯? 安卓手机的通讯录是用什么文件格式记录的? 跑去 Google 了一下, 发现: 哦哦哦, 原来是用 .vcf 文件呐, get!
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>于是跑去网上查了一下教程, 发现, Gmail 就可以实现 .csv → .vcf!</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 于是无耻的 跑去和 Az 借了个号, 成功了转成了 .vcf文件! 
+</code></pre></div>    </div>
+  </li>
+  <li>再扔进安卓里试试? 成了!!! 已经开始同步了!</li>
+  <li>打开微信一看, 哈哈哈哈哈, 一波待添加好友的家伙在那里等着我….爽死了!!</li>
+</ol>
+
+<p>总结流程:</p>
+<ol>
+  <li>麦客:麦客导出 Excel.</li>
+  <li>Numbers: Mac 打开 excel, 可以直接导出为 .csv 文件.</li>
+  <li>Gmail: 把 .csv → vcf</li>
+  <li>把 vcf 文件扔进手机!</li>
+</ol>
+
+:ET

@@ -1,0 +1,127 @@
+I"o<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Wrote by: Yixuan Franco
+- Version: 0.0 Date: Dec.15, 2016
+- Version: 0.1 Date: Nov.18, 2018
+</code></pre></div></div>
+
+<h2 id="宣誓">宣誓</h2>
+<p>Windows 去死去死团践行者, Linux/BSD/Unix 终究将拯救世界.</p>
+
+<h3 id="mac-tool-list">Mac Tool List</h3>
+
+<ol>
+  <li>写作
+    <ul>
+      <li>MWeb Lite (markdown)</li>
+      <li>Ulysses (markdown)</li>
+      <li>Scrivener (卡片式写作)</li>
+      <li>Keynote
+        <ul>
+          <li>请不要再叫 PPT PPT, 从今以后统称为幻灯片!
+            <ul>
+              <li>Keynote 比 PPT 逼格高 99 亿倍! 可以直接用来做视频!</li>
+              <li>写 BP, 走向人生巅峰的前提: 学会用 keynote.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>终端
+    <ul>
+      <li>iTerm2</li>
+      <li>Tmux</li>
+      <li>Zsh(可以让你的智商瞬间提升 300 点!) →<a href="http://yixuan.li/geek/2016/11/24/ZSH/">Yixuan 的教程</a></li>
+      <li>cmus(终端音乐播放器)→<a href="http://yixuan.li/geek/2016/04/20/moc/">Yixuan 的教程 </a></li>
+      <li><a href="http://coolshell.cn/articles/5426.htm">简明 Vim 练级攻略</a></li>
+    </ul>
+  </li>
+  <li>代码类
+    <ul>
+      <li>Git</li>
+      <li>Xcode</li>
+      <li>Dash (集合了全世界的文档)</li>
+      <li>Sublime(就凭它好看)</li>
+      <li>Filezilla, 嗯哼, 比用 Firefox 传舒服.</li>
+      <li>Gitter, 代码不会了, 直接问, 一堆大神实时回答.</li>
+      <li>PyCharm, python 码农专用. 目测不错.</li>
+    </ul>
+  </li>
+  <li>浏览器
+    <ul>
+      <li>Firefox: 资深程序员往往推荐这个, 因为插件依赖. 也的确不耗内存.</li>
+      <li>Chrome: 我推荐这个, 作法儿很多, 尤其是 manage search engine! 拯救宇宙呐!</li>
+      <li>Safari: 2018 年, 惊奇的发现 Chrome 已经变成了巨款去死去死 App. 为了省电, 我经常会切到 Safari 上.</li>
+    </ul>
+  </li>
+  <li>下载 + 备份
+    <ul>
+      <li>七牛: 命令行搞定一切, 图床首推备份地. But! 开了 VPN 就嗝屁.</li>
+      <li>百度云: 我发自肺腑的期待你不要用.</li>
+      <li>uTorrent</li>
+      <li>我家云: 项目方记得给我推广费. 比家属 NAS 便宜且好用. 刷电影/备份必备. 肉身翻美国期间证实可用. 价格只有 NAS 的1/10.</li>
+    </ul>
+  </li>
+  <li>自己的技术博客
+    <ul>
+      <li>GitHub Pages 可以搞定一切!</li>
+      <li>传说: 没有自己技术博客的程序员, 全孤独死了.</li>
+      <li>评论: 请使用 Disqus, 虽然必须翻墙才能看, 但连翻墙都不会的人, 不配看你博客的评论.</li>
+      <li>不要用多说, ok?</li>
+    </ul>
+  </li>
+  <li>播放器
+    <ul>
+      <li>穷则: QuickTime Player, Mplayer OSX Extended</li>
+      <li>富则: Kplayer</li>
+    </ul>
+  </li>
+  <li>艺术家系列…
+    <ul>
+      <li>Final Cut Pro 影片</li>
+      <li>Motion 影片</li>
+      <li>videoScribe 影片</li>
+      <li>Logic Pro 音乐</li>
+      <li>GarageBand 音乐</li>
+      <li>VOX 高质量音乐, 古典爱好者专用</li>
+      <li>Aegisub 字幕制作狂热爱好者</li>
+      <li>Blender 3D 建模必备, 用来做2D 漫画的作弊器.</li>
+      <li>AE 一帧帧的做动画, 必备.</li>
+      <li>CrazyTalk Animator 做动画作弊神器没有之一. 体验了才知道!</li>
+    </ul>
+  </li>
+  <li>特工类及时沟通系列
+    <ul>
+      <li>Skype</li>
+      <li>Telegram(已被币圈攻占, 不推荐玩)</li>
+    </ul>
+  </li>
+  <li>GTD
+    <ul>
+      <li>Pomotodo 番茄时钟</li>
+      <li>workflowy 列表式记录</li>
+      <li>Trello 卡片式管理</li>
+      <li><code class="highlighter-rouge">Omni-</code> 系列, 自己 APP store 一下?</li>
+      <li>自带 reminder, 可当 to-do-list 来用</li>
+      <li>Notes: 手机与 Mac 互相 sync… 爽极了.</li>
+      <li>Cold Turkey Bloack: 将你的玩耍时间可视化, 可以 block 掉网站及本地 App. 可免费使用大部分功能, 付费版也才25加元(美金19刀左右)</li>
+    </ul>
+  </li>
+  <li>系统
+    <ul>
+      <li>Bootcamp: 如果你非得装 Windows 的话.</li>
+      <li>VMware Fusion: Mac 上最好的虚拟机</li>
+      <li>Kali: 基于 Debian, 做攻击渗透/安全最好的系统.</li>
+      <li>CentOs</li>
+      <li>
+        <p>Ubuntu</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   发现之前格式炸了. 于是重新调节一下, 在 video 方面加了 VideoScribe. 
+
+   用的很趁手. -- by Yixuan Mar.18, 2017
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+:ET

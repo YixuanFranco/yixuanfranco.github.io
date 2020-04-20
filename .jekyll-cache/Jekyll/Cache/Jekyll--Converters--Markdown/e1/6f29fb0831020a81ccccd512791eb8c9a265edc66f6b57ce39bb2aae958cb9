@@ -1,0 +1,97 @@
+I"�
+<iframe frameborder="20" border="20" marginwidth="10" marginheight="0" width="298" height="80" src="http://openmindclub.zoomquiet.top/Yixuan/music/ohMyGod.mp3"></iframe>
+
+<h3 id="开发文档の背景">开发文档の背景</h3>
+<p><strong>萱小璧. ོYixuan</strong> 14:58
+我有一个梦想：智能家居端茶倒水扫地做饭净化空气到点喂食儿</p>
+
+<p>钟佳辰 15:07
+端茶机器人 全自动饮水机 扫地机器人 新风系统 天天外卖</p>
+
+<p>钟佳辰 15:07
+不过这些都抵不过一个管家 或者男朋友[偷笑]</p>
+
+<p><strong>萱小璧. ོYixuan</strong> 15:08
+智能男朋友。</p>
+
+<p>墙皮皮-吴越 15:15
+为了并行化和高可用，得有多个</p>
+
+<p>大猫Felix 15:15
+不听话就拆开换芯片</p>
+
+<p>chenbihua 15:16
+班长和男朋友这个梗被用了好多遍了。。</p>
+
+<p>00 15:16
+会不会没电……</p>
+
+<p>Zoom.ོQuiet 15:17
+核能420年换次燃烧就好</p>
+
+<p><strong>萱小璧. ོYixuan</strong> 15:18
+@chenbihua 所以, 我可能是命中注定要去开发这套系统的人.</p>
+
+<p><strong>萱小璧. ོYixuan</strong> 15:18
+不然简直对不起我的宿命</p>
+
+<h3 id="为了宿命">为了宿命</h3>
+<p>所以我们将开发 『蓝盆友』 品牌, 线上线下 360° 无死角满足你对男朋友的幻想.
+此项目为开源项目, 使用 <code class="highlighter-rouge">DO WHAT THE FUCK YOU WANT LICENSE</code>.</p>
+
+<ol>
+  <li>用户需求.</li>
+  <li>实现自动订饭功能.</li>
+  <li>实现每日 “甜言蜜语” 功能.</li>
+  <li>每日讲睡前小故事.</li>
+  <li>每周定保洁阿姨来打扫.</li>
+  <li>节日自动订花.</li>
+  <li>众筹基金.</li>
+  <li>男友拍照功能.</li>
+  <li>提醒月经周期.</li>
+  <li>定期讲小笑话.</li>
+  <li>
+    <p>…</p>
+  </li>
+  <li>目标用户</li>
+  <li>结婚前木有男朋友可以使用.</li>
+  <li>结婚前有了男朋友觉得男朋友不好可以使用.</li>
+  <li>结婚后有了老公觉得老公不好可以使用.</li>
+  <li>离婚后可以使用.</li>
+  <li>
+    <p>流水的男人铁打的『蓝盆友』.</p>
+  </li>
+  <li>资金来源
+    <ul>
+      <li>支付宝账户: bailishanshan@foxmail.com</li>
+      <li>不要捐太多钱, 我们暂时用不到.</li>
+      <li>但会在 GitHub 做记录.</li>
+    </ul>
+  </li>
+  <li>开发人员:
+    <ul>
+      <li>自愿加入.</li>
+      <li><a href="https://github.com/YixuanFranco/yourboyfriend">项目地址</a></li>
+      <li>盈利模式: 按功能项收费.</li>
+    </ul>
+  </li>
+  <li>开发目标.</li>
+  <li>App</li>
+  <li>网页.</li>
+  <li>智能家居.</li>
+</ol>
+
+<h3 id="如何加入这个项目">如何加入这个项目?</h3>
+
+<p>你可以…</p>
+
+<ul>
+  <li>补充你想要的需求. <a href="https://github.com/YixuanFranco/yourboyfriend/issues/2">补充地址</a></li>
+  <li>补充你对男朋友的幻想.</li>
+  <li>写下你会的编程语言.</li>
+  <li>认领你想要实现的模块.</li>
+  <li>认领你想要的项目职位.</li>
+  <li>开始!</li>
+</ul>
+
+:ET

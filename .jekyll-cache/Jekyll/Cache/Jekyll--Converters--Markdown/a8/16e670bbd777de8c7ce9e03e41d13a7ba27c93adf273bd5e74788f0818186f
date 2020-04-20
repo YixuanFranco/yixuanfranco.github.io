@@ -1,0 +1,242 @@
+I"W,<p>上一篇已经提到, 整个微信公众号与用户的交互方式了. 不过我们只做了 文字消息 型. 但是, 用户除了发文字消息, 也可能发图片, 语音, 视频等类型的消息.</p>
+
+<p>用户发送文字消息的时候, 我们抓取到用户给我们的内容, 然后把内容发送回去. 但是, 如果用户发的是图片呢? 或者语音呢? 我们要返回什么?</p>
+
+<p>所以呐, 就要看看官方文档里, 图片的 xml 和 语音的 xml 都包含什么了. 于是乎….我们要先把接收的部分改写一下, 改写成一个类: 这个类李包含文字, 语音…各种各样微信支持的消息类型.</p>
+
+<p>所以, 先看一下源代码:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 elif request.method == "POST":
+2        # do something about POST here
+3        str_xml = request.body.decode('utf-8')    #use body to get raw data
+4        xml = etree.fromstring(str_xml)            
+5        toUserName = xml.find('ToUserName').text
+6       fromUserName = xml.find('FromUserName').text
+7      createTime = xml.find('CreateTime').text
+8        msgType = xml.find('MsgType').text
+9        content = xml.find('Content').text   #获得用户所输入的内容
+10        msgId = xml.find('MsgId').text
+11       return render(request, 'reply_text.xml',
+12                      {'toUserName': fromUserName,
+13                      'fromUserName': toUserName,
+14                       'createTime': time.time(),
+15                       'msgType': msgType,
+16                       'content': content,
+17                       },
+18                       content_type = 'application/xml'
+19        )
+</code></pre></div></div>
+
+<p>第一部分: 这部分是接收 xml, 解析 xml 和拿到需要的数据. 第 3 行, 我们接收到微信发给我们的信息内容. 第 4 行, 我们解析一下 xml. 第 4 - 10 行, 我们从我们解析的 xml 中拿到我们想要的信息….</p>
+
+<p>第二部分: 第 11 行到第 19行. 我们 <a href="https://github.com/YixuanFranco/wx/blob/master/mysite/wechat/templates/reply_text.xml">reply_text.xml</a> 模板的样子, 把我们拿到的给中信息, 比如 fromUserName 啊, msgType 啊, 全部扔到模板李, 生成新的 xml, 然后发回给微信.</p>
+
+<p>所以, 我们要做的就是把第一部分先改写成类. 上面第三行不用动, 下面的解析和拿数据什么的可以先写成类实现一下. 我们在 mysite/wechat 里新建一个 receive.py. 里面重写一下解析和拿数据的代码.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># -*- coding: utf-8 -*-
+import xml.etree.ElementTree as ET 
+
+def parse_xml(web_data):
+    xmlData = ET.fromstring(web_data) 
+    msg_type = xmlData.find('MsgType').text
+    if msg_type == 'text': # 因为之后可能还会有别的类型
+        return TextMsg(xmlData)  # 那返回的函数就不一样, 所以这里要判断一下. 
+     
+class Msg(object): # 这里就是收到文字后会拿到的数据
+    def __init__(self, xmlData): 
+        self.toUserName = xmlData.find('ToUserName').text
+        self.fromUserName = xmlData.find('FromUserName').text
+        self.createTime = xmlData.find('CreateTime').text
+        self.msgType = xmlData.find('MsgType').text
+        self.msgId = xmlData.find('MsgId').text
+</code></pre></div></div>
+
+<p>大家逐行看一下我写的代码就可以, 就做了这么几件事儿:</p>
+<ol>
+  <li>把 xml 发来的消息类型判断一下.</li>
+  <li>然后确定调用什么类</li>
+  <li>在类里, 拿到自己需要的数据(需要拿到什么官文里有. 可以自己琢磨琢磨, 不会可以发邮件问我. )</li>
+</ol>
+
+<p>那上面这部分只有文字的…我们可以把几个常用的消息类型全都扔进去. 整个的代码:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># -*- coding: utf-8 -*-
+import xml.etree.ElementTree as ET 
+
+# web_data = request.body.decode('utf-8')  use this to get data
+# 这块应该 receive.py 来处理.   
+def parse_xml(web_data):
+    xmlData = ET.fromstring(web_data) 
+    msg_type = xmlData.find('MsgType').text
+    if msg_type == 'text':
+        return TextMsg(xmlData)
+    elif msg_type == 'image':
+        return ImageMsg(xmlData)
+    elif msg_type == 'voice':
+        return VoiceMsg(xmlData)
+    elif msg_type == 'video':
+        return VideoMsg(xmlData)
+
+class Msg(object):
+    def __init__(self, xmlData):
+        self.toUserName = xmlData.find('ToUserName').text
+        self.fromUserName = xmlData.find('FromUserName').text
+        self.createTime = xmlData.find('CreateTime').text
+        self.msgType = xmlData.find('MsgType').text
+        self.msgId = xmlData.find('MsgId').text
+
+
+class TextMsg(Msg):
+    def __init__(self, xmlData):
+        Msg.__init__(self, xmlData)
+        self.content = xmlData.find('Content').text.encode("utf-8")
+
+class ImageMsg(Msg):
+    def __init__(self, xmlData):
+        Msg.__init__(self, xmlData)
+        self.picUrl = xmlData.find('PicUrl').text
+        self.mediaId = xmlData.find('MediaId').text
+
+class VoiceMsg(Msg):
+    def __init__(self, xmlData):
+        Msg.__init__(self, xmlData)
+        self.format = xmlData.find('Format').text
+        self.recognition = xmlData.find('Recognition').text.encode("utf-8")
+        self.mediaId = xmlData.find('MediaId').text
+
+class VideoMsg(Msg):
+    def __init__(self, xmlData):
+        Msg.__init__(self, xmlData)
+        self.mediaId = xmlData.find('MediaId').text
+        self.thumbMediaId = xmlData.find('ThumbMediaId').text
+</code></pre></div></div>
+
+<p>看到了把, 这样, 就可以处理不同的消息类型了… 我们这里有 TextMsg(文字类型), ImageMsg(图片类型), VoiceMsg(语音类型), VideoMsg(视频类型). 注意啊…他们各自需要拿的信息都不一样.</p>
+
+<p>所以, 我们接下来看看这个接收的类成功了没, 我们改写一下 view.py.</p>
+<ol>
+  <li>因为我们新写了一个 receive.py, 这里要用, 所以在 view.py 的开头要引用一下. 加上 import receive 即可.</li>
+  <li>把 receive.py 里的数据拉到 view.py 里来:</li>
+</ol>
+
+<p>第一部分:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 1 elif request.method == "POST":
+ 2        str_xml = request.body.decode('utf-8')    #use body to get raw data          
+ 3        recMsg = receive.parse_xml(str_xml) # 注意要引用 receive.py
+ 4        toUserName = recMsg.toUserName
+ 5        fromUserName = recMsg.fromUserName
+ 6 	  msgType = recMsg.msgType
+ 7        createTime = recMsg.createTime
+</code></pre></div></div>
+
+<p>第二部分:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>return render(request, 'reply_text.xml',
+	{'toUserName': fromUserName,
+	'fromUserName': toUserName,
+	'createTime': createTime,
+	'msgType': msgType,
+	'content': content,
+	},
+	content_type = 'application/xml'
+        )
+</code></pre></div></div>
+
+<p>我们改动的是 3-5 行的代码…然后运行一下你的 Django, 你给公众号发一个信息, 它应该给你回复一个一模一样的文字信息(这里先只发英文, 汉语支持我们稍后改).</p>
+
+<p>然后我们再去修改第二部分, 把 reply 也写成一个类. 在 mysite/wechat 下新建一个 reply.py, 然后写入代码:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># -*- coding: utf-8 -*-
+import time
+
+class Msg(object):
+    def __init__(self):
+        pass
+    def send(self):
+        return "success"
+
+class TextMsg(Msg):
+    def __init__(self, toUserName, fromUserName, content):
+        self.__dict = dict()
+        self.__dict['ToUserName'] = toUserName
+        self.__dict['FromUserName'] = fromUserName
+        self.__dict['CreateTime'] = int(time.time())
+        self.__dict['Content'] = content
+
+    def send(self):
+        XmlForm = """
+        &lt;xml&gt;
+		# 因为俺的博客限制, xml 这里我就不粘贴了. 
+		# 大家可以直接去 [GitHub](https://github.com/YixuanFranco/wx) 里找一下 /mysite/wechat/reply 里 fork 一下就行. 
+	&lt;/xml&gt;
+        """
+        return XmlForm.format(**self.__dict)
+</code></pre></div></div>
+
+<p>这个逻辑很简单:</p>
+<ol>
+  <li>先接到数据.</li>
+  <li>然后套上模板.</li>
+  <li>生成新的 xml 扔回去.</li>
+</ol>
+
+<p>弄完 reply.py 后, 我们再去改一下 view.py.</p>
+<ol>
+  <li>先要引用 reply.py, 所以要在 view.py 首行加上 import reply</li>
+  <li>改一下之前的回复代码:</li>
+</ol>
+
+<p>原来的样子是:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>         return render(request, 'reply_text.xml',
+                               {'toUserName': fromUserName,
+                               'fromUserName': toUserName,
+                               'createTime': createTime,
+                               'msgType': msgType,
+                               'content': content,
+                               },
+                               content_type = 'application/xml'
+         )
+</code></pre></div></div>
+
+<p>现在要用 reply 来做这件事….</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 改成:
+if recMsg.msgType == 'text':  # 因为可能回复别的类型, 所以这里也要有判断
+            msgType = recMsg.msgType 
+            createTime = recMsg.createTime
+            content = recMsg.content
+	   replyMsg = reply.TextMsg(fromUserName, toUserName, content)
+	  # 调用 reply.py 里的 TextMsg, 然后接受信息
+            return HttpResponse(replyMsg.send()) 
+	 # 包成 Django 要的 Httpresponse 给他扔回去.
+</code></pre></div></div>
+
+<p>所以, 我们在加完 reply.py 和 receive.py 后, 整个 view.py 里关于 POST 的代码从 19 行减少为 11 行…而且, 这些判断都是可以复用哒:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	elif request.method == "POST":
+        str_xml = request.body.decode('utf-8')    #use body to get raw data          
+        recMsg = receive.parse_xml(str_xml) # 注意要引用 receive.py
+        toUserName = recMsg.toUserName
+        fromUserName = recMsg.fromUserName
+
+        if recMsg.msgType == 'text':
+            cool = "You send me a stupid message: "
+            msgType = recMsg.msgType
+            createTime = recMsg.createTime
+            content = cool + recMsg.content
+            replyMsg = reply.TextMsg(fromUserName, toUserName, content)
+            return HttpResponse(replyMsg.send())
+</code></pre></div></div>
+
+<p>再启动一下你的 Django, 看看效果, 应该是一毛一样的.  为了方便我们回复不同类型的消息, 我们可以把 reply.py 在细化一下. 大家去看我的 GitHub 吧…上面都有代码了. 所以, 跑通了一个, 就能跑通 N 个.</p>
+
+<p>如果按照我的方法跑不通, 你可以发邮件问我. 这里是写了所有的接口, 然而视频什么这种涉及多媒体下载的东西, 微信个人公众号是没有权限的, 所以可能是因为你没有权限的问题. 可以用测试号去测一下你的接口对不对.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Version: 0
+Feb. 21, 2017
+Yixuan 
+</code></pre></div></div>
+
+:ET

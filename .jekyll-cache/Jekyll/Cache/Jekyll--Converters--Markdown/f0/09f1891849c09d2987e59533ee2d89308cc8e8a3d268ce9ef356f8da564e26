@@ -1,0 +1,30 @@
+I"�<p>我日.</p>
+
+<p>保温杯的水一整天都烫嘴唇, 一开手机, 全是 BUG 邮件. 产品经理在叫嚣, 程序员成团犯肉. 哎我日.</p>
+
+<p>项目 Deadline 前两周, 公司本来一片祥和. 随着 Deadline 将近, BUG 数成 “反递归” 般增长.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>“消除 1 个一般 BUG.”
+“操, 蹦出 2 个重要 BUG.”
+"消除 2 个重要 BUG"
+"操, 又蹦出 4 个紧急 BUG."
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">薛定谔的 BUG 定理</code>: 实验是这样的, 在一个 APP 里有一些 BUGs, 以及少量秃顶程序员. 之后, 有 50% 的程序员会狼变并释放出代码杀死这些 BUGs, 同时有50% 的概率程序员不会狼变而 BUGs 将活下来.</p>
+
+<p>根据经典 BUG 学, 在测试中必将发生这两个结果之一, 而测试人员只有打开盒子才能知道里面的结果.</p>
+
+<p>呵呵哒.</p>
+
+<p>又想起已经经典程序员的笑话…</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>XXX: “雾草, 这里报了一个 BUD”
+程序员: "好, 你给我等着."
+(程序员内心 OS: 来, 待老夫把这段代码注释掉. )
+XXX: "雾草? 这边又出现了两个 BUG..."
+程序员: "好, 你且再给我等着."
+(程序员内心 OS: 来, 老夫再把这段代码注释回来 O(∩_∩)O.)
+</code></pre></div></div>
+
+<p>转眼十六年过去了… 我们望着小龙女留下的石碑, 一跃而下.</p>
+:ET

@@ -90,22 +90,22 @@ pyenv 有用的命令大概就这么多.
     - 比如我现在建立了两个工作文件夹, project_one 和 project_two. 
         两个文件夹我都打用 Python 3.7.0 开发:   
 
-        $ pyenv virtualenv 3.7.0 project_one  
-        $ pyenv virtualenv 3.7.0 project_two  
+            $ pyenv virtualenv 3.7.0 project_one  
+            $ pyenv virtualenv 3.7.0 project_two  
     
     - 但是, **project_one** 我想用 flask 0.9 版本开发, **project_two** 我想用 flask 1.0 版本开发:  
         这时你就可以现在第一个工作环境中安装,  
     
-        $ pyenv activate project_one  
-        (project_one) $ pip install flask==0.9  
-        (project_one) $ pyenv deactivate  
+            $ pyenv activate project_one  
+            (project_one) $ pip install flask==0.9  
+            (project_one) $ pyenv deactivate  
 
     - 然后我们再在第二个虚拟环境中安装 flask 1.0:
         命令如下,          
 
-        $ pyenv activate project_two  
-        (project_two) $ pip install flask==1.0  
-        (project_two) $ pyenv deactivate  
+            $ pyenv activate project_two  
+            (project_two) $ pip install flask==1.0  
+            (project_two) $ pyenv deactivate  
 
 至此大功告成, 你可以在任意 Python 版本下, 设置任意的工作环境啦!
 

@@ -1,0 +1,62 @@
+I"o<h2 id="背景">背景</h2>
+
+<p>在大妈的一个音频+视频的演示中, 发现了在<code class="highlighter-rouge">terminal</code> 里放音乐的方式, 这也太 Geek 了吧. 于是决定开始尝试.</p>
+
+<h2 id="分析">分析</h2>
+
+<p>果断还是去看 <a href="https://moc.daper.net/download">官方文档</a>, 结果…尼玛啊, 下完一个包又要下一个包, 下完一个包又要下一个包. 一抬头看自己的时间, 已经<strong>半小时</strong>过去了! 果断叫停!</p>
+
+<p>从新 Google 一下, 尝试找到 OS X 下的安装方式. =-= 结果 GitHub 上已经有了下载的命令了, 而且已经把所有的 Bug 都踩过一遍了, 所以我还折腾个鬼啊. 命令行如下:<br />
+<code class="highlighter-rouge">brew install moc --with-ncurses</code>.</p>
+
+<p>然后就把 terminal 扔在这去干别的事儿了, 回来一看<code class="highlighter-rouge">moc-2.5.0 already installed</code>, o(￣ヘ￣o#)哼哼, 安装成功! 可是距离开挖这个坑已经过去了一个小时了呐! 这就是使用了错误教程的代价.</p>
+
+<h2 id="遇到的坑">遇到的坑</h2>
+
+<p>由于下载完了之后有别的事儿, 所以没打开 moc 玩. 趁着下午没什么事儿, 想在 terminal 里看看音乐试试. 网上看了教程, 说, 只要在 terminal 里输入 mocp 就行了. 于是激动的输入了mocp, 得到了:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Trying JACK...
+
+    FATAL_ERROR: No valid sound driver!
+
+    FATAL_ERROR: Server exited!
+</code></pre></div></div>
+
+<p>Oh, WTH, 这是什么科学道理? 于是有去查了这是什么梗, 得到<a href="https://moc.daper.net/node/776">答案一则</a>, 原来要先在 terminal 输入一次<code class="highlighter-rouge">jackd -d coreaudio</code>(只需要输入一次), 再输入 mocp, 就不会有问题了!</p>
+
+<p>试了试…果然有用! 哈哈哈哈….现在已经在 Terminal 里放起了音乐. 感觉自己向找不到男票的大路上又挺进了一大步! 我骄傲!</p>
+
+<hr />
+
+<h2 id="未完待续">未完待续!</h2>
+
+<p>大妈这个扔梗达人, 不仅仅喜欢扔梗, 还把梗分为1, 2, 3 级别的…炸裂. 于是, 在刚刚适应 Moc 后, 大妈说, 在 MOC 的使用基础上, 可以尝试使用 <code class="highlighter-rouge">cmus</code>!</p>
+
+<p>啊! 过分! <strong>尽管我细心灌溉, 你说不爱就不爱.</strong> 大妈秀了一下 cmus 的页面, 目测比 moc 好看, 于是决定趁着 moc 还没用熟练. 转成 cmus 好了!</p>
+
+<p>大妈说, 只有觉得 moc 好的人, 才会转到 cmus 上啊…所以一级一级的往上升级吧!</p>
+
+<h2 id="下载安装">下载安装</h2>
+
+<p>大妈扔了一些 <a href="https://cmus.github.io/">link </a> 过来, 于是… 跑过去装装装装. 首选是 <code class="highlighter-rouge">brew install</code>…结果尼玛, 这破包下载不下来, 一弄又半个小时过去了.</p>
+
+<p>立刻换办法, 不折腾了, 直接把安装包下载下来, 换 <code class="highlighter-rouge">make install</code> 的方式把 <code class="highlighter-rouge">cmus</code> 用不到一分钟的时间装上了. =-=! 所以啊, 时间黑洞就是来的没有一点点防备.</p>
+
+<h2 id="error">Error:</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: can't change volume: mixer is not open 
+</code></pre></div></div>
+
+<p>然后 cmus 有一个梗, 就是用<code class="highlighter-rouge">[,],-,+</code> 没法调节声音哎. 在 女主的探索下, 告诉 me, 直接在 cmus 输入<code class="highlighter-rouge">:set softvol=true</code> 就可以解决了!</p>
+
+<p>专注有时候是好事儿, 但把一个失败的方法做上 <strong>420+</strong> 次也依然是失败啊! 所以特此, 给自己大脑植入命令一条如下: 如果一个方法用了三次都没有效果, 立刻抬头看看有没有别的方法!</p>
+
+<p><strong>要跟困难死磕! 不要在一个方法上死磕!</strong></p>
+
+<p>是也乎是也乎, 现在已经把 cmus 摸透了. 感觉非常之爽.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    P.S: Part Two cmus 增补于 Apr.21, 2016 17:47
+ P.SS: 我靠...我又在 mixer is not open 中跌倒了一次...搜遍全网才发现, 答案早已在我的 blog 里面. 内心是崩溃的. 于是, 为了方便未来人索引, 把 error code 放上来了. Nov.24, 2016 17:23
+</code></pre></div></div>
+
+:ET

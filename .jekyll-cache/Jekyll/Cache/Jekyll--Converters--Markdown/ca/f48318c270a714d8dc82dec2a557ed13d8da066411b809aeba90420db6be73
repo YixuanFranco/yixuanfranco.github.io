@@ -1,0 +1,134 @@
+I"�<p><img src="/images/multi.png" alt="multi" /></p>
+
+<p>问题是有一天, 我在群里抱怨, 为毛每次学习 <strong>data science</strong> 都要重装 Jupyter. 我仿佛一年已经重装了100次 jupyter.</p>
+
+<p>于是大妈怼道, “所以让你装 <strong>pyenv</strong> 呐, 提醒过很多次了.”</p>
+
+<p>接下来就很像软广对白了.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>我: “到底为啥要用 pyenv 啊. 是为了使用 Python3 吗?”  
+大妈: “pyenv 可以集中管理配置主要 5 种 100 多版本的 Python 运行环境  
+以及具体任何一个版本环境中和工程匹配的任意模块桟.”  
+</code></pre></div></div>
+
+<p>好, 听到这里我还是不甚明白. 总之我就想要一个 jupyter 的推荐环境 Python3(2里面实在太多坑啦), 最好也别影响我的 Python2.  <br />
+乍一听, pyenv 仿佛是可以解决我这个需求的. 于是开始作…</p>
+
+<h3 id="1-安装-pyenv-先">1. 安装 pyenv 先</h3>
+<p><a href="https://github.com/pyenv/pyenv">完整的 pyenv 安装方式在这里</a></p>
+
+<p>这里我只说 Mac 的安装方法:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ brew update  
+$ brew install pyenv   
+</code></pre></div></div>
+
+<h3 id="2-pyenv-怎么用">2. pyenv 怎么用</h3>
+
+<p>逻辑:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 先查查有哪些可以用的版本   
+2. 将这个版本下载下来  
+3. 切换来...切换去...切换来...切换去    
+</code></pre></div></div>
+
+<p>可用命令:</p>
+<ol>
+  <li><strong>pyenv install -l</strong>  <br />
+ 这个命令会罗列出所有可用的版本.    <br />
+ <img src="/images/pyenvInstallL.png" alt="pyenvInstallL" /></li>
+  <li><strong>pyenv install 3.7.0</strong>  <br />
+ 你可以选择一个可用版本来进行安装. 这个命令可以让你在电脑上装上 Python 的 3.7.0 版本. 如果你想装别的可用版本, 可以把 3.7.0 替换成别的东西.</li>
+  <li><strong>pyenv versions</strong> <br />
+ 安装完毕后, 你可以查查你现在已经拥有什么版本的 Python 了.
+ <img src="/images/pyenvVersions.png" alt="pyenvVersions" />   <br />
+ 这是我目前已经有的版本, system 前面有个 <strong>小星星</strong>, 证明我现在整个电脑的 Python 版本是系统自带的 Python 版本(可以用 <strong>python –version</strong> 来查询).</li>
+  <li><strong>pyenv version</strong>  <br />
+注意, 这个命令符的结尾少了一个 s. 和上一个命令不一样.<br />
+这个命令行的作用是, 看看你目前处在哪个版本里.<br />
+<img src="/images/pyenvVersion.png" alt="pyenvVersion" />  <br />
+为了方便你看一下这两个命令的区别, 我把效果一起截图啦</li>
+  <li><strong>pyenv global 3.7.0</strong>  <br />
+ 这个命令是, 把整台电脑都变换为 Python 3.7.0 的环境. 变换完之后, 可以用上面学过的 <strong>pyenv version</strong> 查看一下是否已经变换成功.</li>
+  <li>
+    <p><strong>pyenv local 3.7.0</strong> <br />
+ 如果我建立了一个项目文件夹, 名叫 <strong>Yixuan</strong>, 我想把 <strong>Yixuan</strong> 这个文件夹的环境变为 Python 的 3.7.0 的话, 我就可以:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cd Yixuan    
+ pyevn local 3.7.0  
+</code></pre></div>    </div>
+
+    <p>然后再用 <strong>pyenv version</strong> 检验一下是否变幻成功即可.</p>
+  </li>
+</ol>
+
+<p>pyenv 有用的命令大概就这么多.</p>
+
+<h3 id="3-下面我们说说--pyenv-virtualenv">3. 下面我们说说  pyenv-virtualenv</h3>
+
+<p>安装文档是这个地址: https://github.com/pyenv/pyenv-virtualenv<br />
+不是 <strong>virtualenv</strong>, 是 <strong>pyenv-virtualenv</strong>. <br />
+我就安错了, 所以吓得我把原地址都放出来了.</p>
+
+<p>安装命令是:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install pyenv-virtualenv   
+</code></pre></div></div>
+
+<p>大妈提醒, 里面有巨坑一个. 记得在 <strong>/.bash_profile</strong> (如果你是 zsh 的话, 建议在 <strong>/.zshrc</strong>)里写入:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH="~/.pyenv/bin:$PATH"    
+eval "$(pyenv init -)"    
+eval "$(pyenv virtualenv-init -)"    
+</code></pre></div></div>
+
+<p>大妈提示道: 这三行是他反复明确, 不能缺少和错误的!!!</p>
+
+<h3 id="4-所以我们稀里糊涂的装上了pyenv-virtual">4. 所以我们稀里糊涂的装上了pyenv-virtual…</h3>
+<p>那么问题来了: 这玩意儿咋干啥用? 咋用?</p>
+
+<ol>
+  <li>这玩意儿干啥用….
+    <ul>
+      <li>它可以让你在同一 Python 版本下, 创造出不同的工作环境.</li>
+    </ul>
+  </li>
+  <li>咋用?
+    <ul>
+      <li>
+        <p>比如我现在建立了两个工作文件夹, project_one 和 project_two. 
+  两个文件夹我都打用 Python 3.7.0 开发:</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ pyenv virtualenv 3.7.0 project_one  
+  $ pyenv virtualenv 3.7.0 project_two  
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>但是, <strong>project_one</strong> 我想用 flask 0.9 版本开发, <strong>project_two</strong> 我想用 flask 1.0 版本开发:<br />
+  这时你就可以现在第一个工作环境中安装,</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ pyenv activate project_one  
+  (project_one) $ pip install flask==0.9  
+  (project_one) $ pyenv deactivate  
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>然后我们再在第二个虚拟环境中安装 flask 1.0:
+  命令如下,</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ pyenv activate project_two  
+  (project_two) $ pip install flask==1.0  
+  (project_two) $ pyenv deactivate  
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>至此大功告成, 你可以在任意 Python 版本下, 设置任意的工作环境啦!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Version 1: 2018-07-31
+Version 2: 2020-4-21
+</code></pre></div></div>
+
+:ET
