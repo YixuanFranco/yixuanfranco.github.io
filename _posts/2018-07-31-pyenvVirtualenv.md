@@ -56,10 +56,10 @@ categories:
 6. **pyenv local 3.7.0**   
 	如果我建立了一个项目文件夹, 名叫 **Yixuan**, 我想把 **Yixuan** 这个文件夹的环境变为 Python 的 3.7.0 的话, 我就可以:  
 
-    cd Yixuan    
-    pyevn local 3.7.0  
+        cd Yixuan    
+        pyevn local 3.7.0  
 
-	然后再用 **pyenv version** 检验一下是否变幻成功即可.  
+    然后再用 **pyenv version** 检验一下是否变幻成功即可.  
 
 pyenv 有用的命令大概就这么多.   
 
@@ -85,25 +85,25 @@ pyenv 有用的命令大概就这么多.
 那么问题来了: 这玩意儿咋干啥用? 咋用?
 
 1. 这玩意儿干啥用….
-	- 它可以让你在同一 Python 版本下, 创造出不同的工作环境.  
+    - 它可以让你在同一 Python 版本下, 创造出不同的工作环境.  
 2. 咋用?  
-	- 比如我现在建立了两个工作文件夹, project_one 和 project_two. 
-        - 两个文件夹我都打用 Python 3.7.0 开发:   
+    - 比如我现在建立了两个工作文件夹, project_one 和 project_two. 
+    - 两个文件夹我都打用 Python 3.7.0 开发:   
 
-    $ pyenv virtualenv 3.7.0 project_one  
-    $ pyenv virtualenv 3.7.0 project_two  
+        $ pyenv virtualenv 3.7.0 project_one  
+        $ pyenv virtualenv 3.7.0 project_two  
     
-        - 但是, **project_one** 我想用 flask 0.9 版本开发, **project_two** 我想用 flask 1.0 版本开发:
+    - 但是, **project_one** 我想用 flask 0.9 版本开发, **project_two** 我想用 flask 1.0 版本开发:
     
-    $ pyenv activate project_one
-    (project_one) $ pip install flask==0.9
-    (project_one) $ pyenv deactivate
+        $ pyenv activate project_one  
+        (project_one) $ pip install flask==0.9  
+        (project_one) $ pyenv deactivate  
 
-        - 然后我们再在第二个虚拟环境中安装 flask 1.0:
+    - 然后我们再在第二个虚拟环境中安装 flask 1.0:
 
-    $ pyenv activate project_two
-    (project_two) $ pip install flask==1.0
-    (project_two) $ pyenv deactivate
+        $ pyenv activate project_two  
+        (project_two) $ pip install flask==1.0  
+        (project_two) $ pyenv deactivate  
 
 至此大功告成, 你可以在任意 Python 版本下, 设置任意的工作环境啦!
 
