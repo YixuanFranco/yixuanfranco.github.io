@@ -85,13 +85,28 @@ pyenv 有用的命令大概就这么多.
 那么问题来了: 这玩意儿咋干啥用? 咋用?
 
 1. 这玩意儿干啥用….
-	它可以一键复制粘贴你已经配置好的 Python 环境.
-2. 咋用?
-	比如我现在建立了一个文件夹叫 jupyter, 我想要给这个 jupyter 一个 Python3.7.0 的环境.  
-	命令: **pyenv virtualenv 3.7.0 jupyter**  
-	然后你在这里面装上 jupyter.   
+	- 它可以让你在同一 Python 版本下, 创造出不同的工作环境.  
+2. 咋用?  
+	- 比如我现在建立了两个工作文件夹, project_one 和 project_two. 
+        - 两个文件夹我都打用 Python 3.7.0 开发:   
 
-	而这个时候…你再用 **pyenv versions**这个命令行, 会发现环境里面多了一个:
-	![jupyterEvn](/images/jupyterEvn.jpg)   
-3. 然后….
-	下次你再想作什么 jupyter 的东西, 直接建个工程文件夹, 然后 **pyenv local 3.7.0/envs/jupyter **, 就可以一键粘贴 jupyter 的使用环境了. 是不是很吊炸天.
+    $ pyenv virtualenv 3.7.0 project_one  
+    $ pyenv virtualenv 3.7.0 project_two  
+    
+        - 但是, **project_one** 我想用 flask 0.9 版本开发, **project_two** 我想用 flask 1.0 版本开发:
+    
+    $ pyenv activate project_one
+    (project_one) $ pip install flask==0.9
+    (project_one) $ pyenv deactivate
+
+        - 然后我们再在第二个虚拟环境中安装 flask 1.0:
+
+    $ pyenv activate project_two
+    (project_two) $ pip install flask==1.0
+    (project_two) $ pyenv deactivate
+
+至此大功告成, 你可以在任意 Python 版本下, 设置任意的工作环境啦!
+
+    Version 1: 2018-07-31
+    Version 2: 2020-4-21
+    
