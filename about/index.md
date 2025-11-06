@@ -3,7 +3,7 @@ title: 自我介绍
 author: Yixuan Li
 layout: page
 ---
-<img width="300" height="400" alt="A photo of Yixuan" src="/images/yixuan.jpg">
+
 
 Hola, 我是 __Yixuan__. 原产地北京, 世界居民. 我的人生理想啊... 远目, 那就是 __醉生梦死, 不劳而获__ 什么的. 当然有理想是好的, 徐徐图之是必须的. 嘿嘿. 当前主要活动就是窝在家做一只迷途小书虫.  副业就是创创业、编编程什么的. 人生核心原则: __用更懒的方式过更好的人生__.
 
@@ -32,14 +32,12 @@ Hola, 我是 __Yixuan__. 原产地北京, 世界居民. 我的人生理想啊...
 
 ## 然后就是一些我的链接...
 
-1. [FaceBook][2]
-2. [微博][3]
-3. [LinkedIn][4]
-4. [豆瓣][5]
-5. [GitHub][6]
-6. [如何记忆一本书(Udemy) \| 成为最强大脑][8]
-8. [如何记忆一本书(网易云课堂) \| 国内学员使用 ][9]
-7. 饭否就不给了.
+
+1. [LinkedIn][4]
+2. [GitHub][6]
+3. [如何记忆一本书(Udemy) \| 成为最强大脑][8]
+4. [如何记忆一本书(网易云课堂) \| 国内学员使用 ][9]
+5. 饭否、微博就不给了.
 
 ## Checklist 未完成
 1. 环游世界.
@@ -50,7 +48,7 @@ Hola, 我是 __Yixuan__. 原产地北京, 世界居民. 我的人生理想啊...
 4. 建立自学者社群.[checked]
 5. 举办影展.[可能要放弃]
 6. 玩遍全世界的蹦极.[可能要放弃]
-7. 找个蓝盆友...[计划紧急暂停\|修仙 ing]
+7. 找个蓝|女盆友...[计划紧急暂停\|修仙 ing]
 8. 学会画画并画一个烂漫画.[2019 get started]
 9. 音乐专辑. [4/10]
 10. 2020 年前读够 2000 本书.[Dec, 2016 立]
@@ -60,8 +58,7 @@ Hola, 我是 __Yixuan__. 原产地北京, 世界居民. 我的人生理想啊...
 14. 待增补 ing…
 
 
-> PressOne License: 
-> https://press.one/p/v?s=d20eade9665e3e5cb82b9cb7bd5795a073c16291fa1dbcb2bc73ad795d5ba70e62e08c9b909b1769f1ae20399873c1e12360fa1dcb85f634422855d1580823580&h=82abc6314993f800c80ff275701d5df423f09525bb0777b04266a781f3945986&a=fe0d8bccb2992e5cf49d7399134df19dc30963fe&f=P1&v=3
+
 
 ## 嗷!
 
@@ -72,10 +69,7 @@ Hola, 我是 __Yixuan__. 原产地北京, 世界居民. 我的人生理想啊...
 	呜呼 呜呼 明日散る花さえも
 
 [1]:	http://www.macundexiatian.com
-[2]:	https://www.facebook.com/liyixuan5402
-[3]:	http://weibo.com/liyixuan5402
 [4]:	https://cn.linkedin.com/in/liyixuan5402
-[5]:	http://www.douban.com/people/woaixiaoyao5402/
 [6]:	https://github.com/YixuanFranco
 [7]:	mailto:me@yixuan.li
 [8]:    https://www.udemy.com/brainhack101/?couponCode=GETCOURSEFOR10DOLLAR
